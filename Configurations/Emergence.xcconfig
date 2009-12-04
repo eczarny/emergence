@@ -1,0 +1,15 @@
+// 
+// Emergence
+// Emergence.xcconfig
+// 
+// Created by Eric Czarny on Monday, February 23, 2009.
+// Copyright (c) 2009 Divisible by Zero.
+// 
+
+PRODUCT_NAME = Emergence
+INFOPLIST_FILE = Resources/Property Lists/Emergence-Info.plist
+
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+GCC_PREFIX_HEADER = Emergence.pch
+
+INSTALL_PATH = /Applications

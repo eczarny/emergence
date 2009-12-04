@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0703BBFA0F561FF600E585BF /* synergyc in Copy Synergy Executables */ = {isa = PBXBuildFile; fileRef = 0788308B0F5399680073DDC6 /* synergyc */; };
+		0703BC5B0F575EE400E585BF /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0703BC5A0F575EE400E585BF /* Defaults.plist */; };
+		0711AC0A0F65D13B003AF147 /* EmergencePreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711AC090F65D13B003AF147 /* EmergencePreferencePane.m */; };
+		0711AC0F0F65D238003AF147 /* EmergencePreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711AC0E0F65D238003AF147 /* EmergencePreferencesWindowController.m */; };
+		0711AC120F65D335003AF147 /* EmergencePreferencePaneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711AC110F65D335003AF147 /* EmergencePreferencePaneManager.m */; };
+		0711AC170F65D3EE003AF147 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0711AC160F65D3EE003AF147 /* Quartz.framework */; };
+		0711ACC40F65D767003AF147 /* EmergenceGeneralPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711ACC10F65D767003AF147 /* EmergenceGeneralPreferencePane.m */; };
+		0711ACC50F65D767003AF147 /* EmergenceUpdatePreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711ACC30F65D767003AF147 /* EmergenceUpdatePreferencePane.m */; };
+		0711ACD20F65D84E003AF147 /* General Preferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0711ACD00F65D84E003AF147 /* General Preferences.tiff */; };
+		0711ACD30F65D84E003AF147 /* Update Preferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0711ACD10F65D84E003AF147 /* Update Preferences.tiff */; };
+		0711ACD50F65D885003AF147 /* PreferencePanes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0711ACD40F65D885003AF147 /* PreferencePanes.plist */; };
+		0711AD3A0F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD340F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib */; };
+		0711AD3B0F65DBC7003AF147 /* EmergencePreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD360F65DBC7003AF147 /* EmergencePreferencesWindow.xib */; };
+		0711AD3C0F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD380F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib */; };
+		0788308E0F5399680073DDC6 /* synergys in Copy Synergy Executables */ = {isa = PBXBuildFile; fileRef = 0788308C0F5399680073DDC6 /* synergys */; };
+		07ABBA480F6C245300824A84 /* EmergenceClientWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ABBA470F6C245300824A84 /* EmergenceClientWindowController.m */; };
+		07ABBA580F6C29A900824A84 /* EmergenceClientWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07ABBA560F6C29A900824A84 /* EmergenceClientWindow.xib */; };
+		07ABBB570F6C48EA00824A84 /* EmergenceServerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07ABBB550F6C48EA00824A84 /* EmergenceServerWindow.xib */; };
+		07ABBB5C0F6C494900824A84 /* EmergenceServerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ABBB5B0F6C494900824A84 /* EmergenceServerWindowController.m */; };
+		07CACC860F5382900038EF41 /* Emergence.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CACC840F5382900038EF41 /* Emergence.xib */; };
+		07CACC8D0F5383140038EF41 /* Emergence-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CACC8B0F5383140038EF41 /* Emergence-InfoPlist.strings */; };
+		07CACCA80F538C910038EF41 /* EmergenceApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CACCA70F538C910038EF41 /* EmergenceApplicationController.m */; };
+		07CACCB40F5391780038EF41 /* EmergenceUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CACCB30F5391780038EF41 /* EmergenceUtilities.m */; };
+		07E440010F5B84F600E0612F /* EmergenceSynergyProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */; };
+		07E440A70F5DFE2800E0612F /* EmergenceSynergyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E440A60F5DFE2800E0612F /* EmergenceSynergyManager.m */; };
+		07F5AB300F6323330023430C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F5AB2D0F6323330023430C /* Localizable.strings */; };
+		2DB0A2990FB3239D00C3BF79 /* EmergenceProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0A2980FB3239D00C3BF79 /* EmergenceProcess.m */; };
+		2DFDF4D310640AB900A85D36 /* synergy.1.conf in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDF4D110640AB900A85D36 /* synergy.1.conf */; };
+		2DFDF4D410640AB900A85D36 /* synergy.2.conf in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDF4D210640AB900A85D36 /* synergy.2.conf */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0733F2100F54D2D800A6E60F /* Copy Synergy Executables */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "synergy-1.3.1";
+			dstSubfolderSpec = 6;
+			files = (
+				0703BBFA0F561FF600E585BF /* synergyc in Copy Synergy Executables */,
+				0788308E0F5399680073DDC6 /* synergys in Copy Synergy Executables */,
+			);
+			name = "Copy Synergy Executables";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0703BC5A0F575EE400E585BF /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = "Resources/Property Lists/Defaults.plist"; sourceTree = "<group>"; };
+		0711AC080F65D13B003AF147 /* EmergencePreferencePane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencePreferencePane.h; sourceTree = "<group>"; };
+		0711AC090F65D13B003AF147 /* EmergencePreferencePane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencePreferencePane.m; sourceTree = "<group>"; };
+		0711AC0C0F65D1AB003AF147 /* EmergencePreferencePaneProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencePreferencePaneProtocol.h; sourceTree = "<group>"; };
+		0711AC0D0F65D238003AF147 /* EmergencePreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencePreferencesWindowController.h; sourceTree = "<group>"; };
+		0711AC0E0F65D238003AF147 /* EmergencePreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencePreferencesWindowController.m; sourceTree = "<group>"; };
+		0711AC100F65D335003AF147 /* EmergencePreferencePaneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencePreferencePaneManager.h; sourceTree = "<group>"; };
+		0711AC110F65D335003AF147 /* EmergencePreferencePaneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencePreferencePaneManager.m; sourceTree = "<group>"; };
+		0711AC160F65D3EE003AF147 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		0711ACC00F65D767003AF147 /* EmergenceGeneralPreferencePane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmergenceGeneralPreferencePane.h; path = "Preference Panes/EmergenceGeneralPreferencePane.h"; sourceTree = "<group>"; };
+		0711ACC10F65D767003AF147 /* EmergenceGeneralPreferencePane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmergenceGeneralPreferencePane.m; path = "Preference Panes/EmergenceGeneralPreferencePane.m"; sourceTree = "<group>"; };
+		0711ACC20F65D767003AF147 /* EmergenceUpdatePreferencePane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmergenceUpdatePreferencePane.h; path = "Preference Panes/EmergenceUpdatePreferencePane.h"; sourceTree = "<group>"; };
+		0711ACC30F65D767003AF147 /* EmergenceUpdatePreferencePane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmergenceUpdatePreferencePane.m; path = "Preference Panes/EmergenceUpdatePreferencePane.m"; sourceTree = "<group>"; };
+		0711ACD00F65D84E003AF147 /* General Preferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "General Preferences.tiff"; path = "Resources/Images/Icons/Toolbar Icons/General Preferences.tiff"; sourceTree = "<group>"; };
+		0711ACD10F65D84E003AF147 /* Update Preferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "Update Preferences.tiff"; path = "Resources/Images/Icons/Toolbar Icons/Update Preferences.tiff"; sourceTree = "<group>"; };
+		0711ACD40F65D885003AF147 /* PreferencePanes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreferencePanes.plist; path = "Resources/Property Lists/PreferencePanes.plist"; sourceTree = "<group>"; };
+		0711AD350F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceGeneralPreferencePane.xib; sourceTree = "<group>"; };
+		0711AD370F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergencePreferencesWindow.xib; sourceTree = "<group>"; };
+		0711AD390F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceUpdatePreferencePane.xib; sourceTree = "<group>"; };
+		0788308B0F5399680073DDC6 /* synergyc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = synergyc; path = "Synergy/synergy-1.3.1/synergyc"; sourceTree = "<group>"; };
+		0788308C0F5399680073DDC6 /* synergys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = synergys; path = "Synergy/synergy-1.3.1/synergys"; sourceTree = "<group>"; };
+		07ABBA460F6C245300824A84 /* EmergenceClientWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceClientWindowController.h; sourceTree = "<group>"; };
+		07ABBA470F6C245300824A84 /* EmergenceClientWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceClientWindowController.m; sourceTree = "<group>"; };
+		07ABBA570F6C29A900824A84 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceClientWindow.xib; sourceTree = "<group>"; };
+		07ABBB560F6C48EA00824A84 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceServerWindow.xib; sourceTree = "<group>"; };
+		07ABBB5A0F6C494900824A84 /* EmergenceServerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceServerWindowController.h; sourceTree = "<group>"; };
+		07ABBB5B0F6C494900824A84 /* EmergenceServerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceServerWindowController.m; sourceTree = "<group>"; };
+		07B56D490FB3BD6400102C8C /* EmergenceProcessDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceProcessDelegate.h; sourceTree = "<group>"; };
+		07CACC7D0F53825C0038EF41 /* Emergence.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emergence.pch; sourceTree = "<group>"; };
+		07CACC7E0F5382790038EF41 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configurations/Common.xcconfig; sourceTree = "<group>"; };
+		07CACC7F0F5382790038EF41 /* CommonDevelopment.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CommonDevelopment.xcconfig; path = Configurations/CommonDevelopment.xcconfig; sourceTree = "<group>"; };
+		07CACC800F5382790038EF41 /* CommonRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CommonRelease.xcconfig; path = Configurations/CommonRelease.xcconfig; sourceTree = "<group>"; };
+		07CACC810F5382790038EF41 /* Emergence.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Emergence.xcconfig; path = Configurations/Emergence.xcconfig; sourceTree = "<group>"; };
+		07CACC820F5382790038EF41 /* EmergenceDevelopment.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = EmergenceDevelopment.xcconfig; path = Configurations/EmergenceDevelopment.xcconfig; sourceTree = "<group>"; };
+		07CACC830F5382790038EF41 /* EmergenceRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = EmergenceRelease.xcconfig; path = Configurations/EmergenceRelease.xcconfig; sourceTree = "<group>"; };
+		07CACC850F5382900038EF41 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/Emergence.xib; sourceTree = "<group>"; };
+		07CACC870F5382B60038EF41 /* Emergence-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Emergence-Info.plist"; path = "Resources/Property Lists/Emergence-Info.plist"; sourceTree = "<group>"; };
+		07CACC8C0F5383140038EF41 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = "Languages/English.lproj/Emergence-InfoPlist.strings"; sourceTree = "<group>"; };
+		07CACCA60F538C910038EF41 /* EmergenceApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceApplicationController.h; sourceTree = "<group>"; };
+		07CACCA70F538C910038EF41 /* EmergenceApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceApplicationController.m; sourceTree = "<group>"; };
+		07CACCB00F5390F60038EF41 /* EmergenceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceConstants.h; sourceTree = "<group>"; };
+		07CACCB20F5391780038EF41 /* EmergenceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceUtilities.h; sourceTree = "<group>"; };
+		07CACCB30F5391780038EF41 /* EmergenceUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceUtilities.m; sourceTree = "<group>"; };
+		07E43FFF0F5B84F600E0612F /* EmergenceSynergyProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceSynergyProcess.h; sourceTree = "<group>"; };
+		07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceSynergyProcess.m; sourceTree = "<group>"; };
+		07E440A50F5DFE2800E0612F /* EmergenceSynergyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceSynergyManager.h; sourceTree = "<group>"; };
+		07E440A60F5DFE2800E0612F /* EmergenceSynergyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceSynergyManager.m; sourceTree = "<group>"; };
+		07F5AB2E0F6323330023430C /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Languages/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2DB0A2970FB3239D00C3BF79 /* EmergenceProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceProcess.h; sourceTree = "<group>"; };
+		2DB0A2980FB3239D00C3BF79 /* EmergenceProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceProcess.m; sourceTree = "<group>"; };
+		2DFDF4D110640AB900A85D36 /* synergy.1.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synergy.1.conf; path = "Synergy/synergy-1.3.1/synergy.1.conf"; sourceTree = "<group>"; };
+		2DFDF4D210640AB900A85D36 /* synergy.2.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synergy.2.conf; path = "Synergy/synergy-1.3.1/synergy.2.conf"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Emergence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emergence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0711AC170F65D3EE003AF147 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0711AC0B0F65D192003AF147 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0711AC0C0F65D1AB003AF147 /* EmergencePreferencePaneProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		0711ACCE0F65D838003AF147 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				0711ACCF0F65D83C003AF147 /* Toolbar Icons */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		0711ACCF0F65D83C003AF147 /* Toolbar Icons */ = {
+			isa = PBXGroup;
+			children = (
+				0711ACD00F65D84E003AF147 /* General Preferences.tiff */,
+				0711ACD10F65D84E003AF147 /* Update Preferences.tiff */,
+			);
+			name = "Toolbar Icons";
+			sourceTree = "<group>";
+		};
+		07343CDF0F53A9FF00BD42FC /* Synergy 1.3.1 */ = {
+			isa = PBXGroup;
+			children = (
+				2DFDF4D110640AB900A85D36 /* synergy.1.conf */,
+				2DFDF4D210640AB900A85D36 /* synergy.2.conf */,
+				0788308B0F5399680073DDC6 /* synergyc */,
+				0788308C0F5399680073DDC6 /* synergys */,
+			);
+			name = "Synergy 1.3.1";
+			sourceTree = "<group>";
+		};
+		0788308A0F53994A0073DDC6 /* Synergy */ = {
+			isa = PBXGroup;
+			children = (
+				07343CDF0F53A9FF00BD42FC /* Synergy 1.3.1 */,
+			);
+			name = Synergy;
+			sourceTree = "<group>";
+		};
+		07B56D470FB3BD5300102C8C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				07B56D490FB3BD6400102C8C /* EmergenceProcessDelegate.h */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		07CACC7A0F53821B0038EF41 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				07CACC7E0F5382790038EF41 /* Common.xcconfig */,
+				07CACC7F0F5382790038EF41 /* CommonDevelopment.xcconfig */,
+				07CACC800F5382790038EF41 /* CommonRelease.xcconfig */,
+				07CACC810F5382790038EF41 /* Emergence.xcconfig */,
+				07CACC820F5382790038EF41 /* EmergenceDevelopment.xcconfig */,
+				07CACC830F5382790038EF41 /* EmergenceRelease.xcconfig */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
+		07CACC7B0F53822C0038EF41 /* Interface Builder */ = {
+			isa = PBXGroup;
+			children = (
+				07CACC840F5382900038EF41 /* Emergence.xib */,
+				07ABBA560F6C29A900824A84 /* EmergenceClientWindow.xib */,
+				0711AD340F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib */,
+				0711AD360F65DBC7003AF147 /* EmergencePreferencesWindow.xib */,
+				07ABBB550F6C48EA00824A84 /* EmergenceServerWindow.xib */,
+				0711AD380F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib */,
+			);
+			name = "Interface Builder";
+			sourceTree = "<group>";
+		};
+		07CACC7C0F5382330038EF41 /* Property Lists */ = {
+			isa = PBXGroup;
+			children = (
+				0703BC5A0F575EE400E585BF /* Defaults.plist */,
+				07CACC870F5382B60038EF41 /* Emergence-Info.plist */,
+				0711ACD40F65D885003AF147 /* PreferencePanes.plist */,
+			);
+			name = "Property Lists";
+			sourceTree = "<group>";
+		};
+		07CACCA10F538C570038EF41 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07CACCA60F538C910038EF41 /* EmergenceApplicationController.h */,
+				07CACCA70F538C910038EF41 /* EmergenceApplicationController.m */,
+				07ABBA460F6C245300824A84 /* EmergenceClientWindowController.h */,
+				07ABBA470F6C245300824A84 /* EmergenceClientWindowController.m */,
+				0711AC0D0F65D238003AF147 /* EmergencePreferencesWindowController.h */,
+				0711AC0E0F65D238003AF147 /* EmergencePreferencesWindowController.m */,
+				07ABBB5A0F6C494900824A84 /* EmergenceServerWindowController.h */,
+				07ABBB5B0F6C494900824A84 /* EmergenceServerWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		07CACCA20F538C5C0038EF41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07B56D470FB3BD5300102C8C /* Delegates */,
+				0711AC0B0F65D192003AF147 /* Protocols */,
+				0711AC080F65D13B003AF147 /* EmergencePreferencePane.h */,
+				0711AC090F65D13B003AF147 /* EmergencePreferencePane.m */,
+				2DB0A2970FB3239D00C3BF79 /* EmergenceProcess.h */,
+				2DB0A2980FB3239D00C3BF79 /* EmergenceProcess.m */,
+				07E43FFF0F5B84F600E0612F /* EmergenceSynergyProcess.h */,
+				07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		07CACCA30F538C620038EF41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		07CACCA40F538C6C0038EF41 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0711AC100F65D335003AF147 /* EmergencePreferencePaneManager.h */,
+				0711AC110F65D335003AF147 /* EmergencePreferencePaneManager.m */,
+				07E440A50F5DFE2800E0612F /* EmergenceSynergyManager.h */,
+				07E440A60F5DFE2800E0612F /* EmergenceSynergyManager.m */,
+				07CACCB20F5391780038EF41 /* EmergenceUtilities.h */,
+				07CACCB30F5391780038EF41 /* EmergenceUtilities.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		07CACCA50F538C7C0038EF41 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0711ACCE0F65D838003AF147 /* Icons */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		07E440F20F5E063900E0612F /* Preference Panes */ = {
+			isa = PBXGroup;
+			children = (
+				0711ACC00F65D767003AF147 /* EmergenceGeneralPreferencePane.h */,
+				0711ACC10F65D767003AF147 /* EmergenceGeneralPreferencePane.m */,
+				0711ACC20F65D767003AF147 /* EmergenceUpdatePreferencePane.h */,
+				0711ACC30F65D767003AF147 /* EmergenceUpdatePreferencePane.m */,
+			);
+			name = "Preference Panes";
+			sourceTree = "<group>";
+		};
+		07F5AB230F6322780023430C /* Localized Strings */ = {
+			isa = PBXGroup;
+			children = (
+				07CACC8B0F5383140038EF41 /* Emergence-InfoPlist.strings */,
+				07F5AB2D0F6323330023430C /* Localizable.strings */,
+			);
+			name = "Localized Strings";
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				07CACCA40F538C6C0038EF41 /* Common */,
+				07CACCA10F538C570038EF41 /* Controllers */,
+				07CACCA20F538C5C0038EF41 /* Models */,
+				07CACCA30F538C620038EF41 /* Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				0711AC160F65D3EE003AF147 /* Quartz.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Emergence.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Emergence */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				07E440F20F5E063900E0612F /* Preference Panes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				0788308A0F53994A0073DDC6 /* Synergy */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Emergence;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				07CACC7D0F53825C0038EF41 /* Emergence.pch */,
+				07CACCB00F5390F60038EF41 /* EmergenceConstants.h */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07CACC7A0F53821B0038EF41 /* Configurations */,
+				07CACCA50F538C7C0038EF41 /* Images */,
+				07CACC7B0F53822C0038EF41 /* Interface Builder */,
+				07F5AB230F6322780023430C /* Localized Strings */,
+				07CACC7C0F5382330038EF41 /* Property Lists */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Emergence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Emergence" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				0733F2100F54D2D800A6E60F /* Copy Synergy Executables */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Emergence;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Emergence;
+			productReference = 8D1107320486CEB800E47090 /* Emergence.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = NO;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Emergence" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Emergence */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Emergence */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0703BC5B0F575EE400E585BF /* Defaults.plist in Resources */,
+				07CACC8D0F5383140038EF41 /* Emergence-InfoPlist.strings in Resources */,
+				07CACC860F5382900038EF41 /* Emergence.xib in Resources */,
+				07ABBA580F6C29A900824A84 /* EmergenceClientWindow.xib in Resources */,
+				0711AD3A0F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib in Resources */,
+				0711AD3B0F65DBC7003AF147 /* EmergencePreferencesWindow.xib in Resources */,
+				07ABBB570F6C48EA00824A84 /* EmergenceServerWindow.xib in Resources */,
+				0711AD3C0F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib in Resources */,
+				0711ACD20F65D84E003AF147 /* General Preferences.tiff in Resources */,
+				07F5AB300F6323330023430C /* Localizable.strings in Resources */,
+				0711ACD50F65D885003AF147 /* PreferencePanes.plist in Resources */,
+				2DFDF4D310640AB900A85D36 /* synergy.1.conf in Resources */,
+				2DFDF4D410640AB900A85D36 /* synergy.2.conf in Resources */,
+				0711ACD30F65D84E003AF147 /* Update Preferences.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CACCA80F538C910038EF41 /* EmergenceApplicationController.m in Sources */,
+				07ABBA480F6C245300824A84 /* EmergenceClientWindowController.m in Sources */,
+				0711ACC40F65D767003AF147 /* EmergenceGeneralPreferencePane.m in Sources */,
+				0711AC0A0F65D13B003AF147 /* EmergencePreferencePane.m in Sources */,
+				0711AC120F65D335003AF147 /* EmergencePreferencePaneManager.m in Sources */,
+				0711AC0F0F65D238003AF147 /* EmergencePreferencesWindowController.m in Sources */,
+				2DB0A2990FB3239D00C3BF79 /* EmergenceProcess.m in Sources */,
+				07ABBB5C0F6C494900824A84 /* EmergenceServerWindowController.m in Sources */,
+				07E440A70F5DFE2800E0612F /* EmergenceSynergyManager.m in Sources */,
+				07E440010F5B84F600E0612F /* EmergenceSynergyProcess.m in Sources */,
+				0711ACC50F65D767003AF147 /* EmergenceUpdatePreferencePane.m in Sources */,
+				07CACCB40F5391780038EF41 /* EmergenceUtilities.m in Sources */,
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0711AD340F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0711AD350F65DBC7003AF147 /* English */,
+			);
+			name = EmergenceGeneralPreferencePane.xib;
+			sourceTree = "<group>";
+		};
+		0711AD360F65DBC7003AF147 /* EmergencePreferencesWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0711AD370F65DBC7003AF147 /* English */,
+			);
+			name = EmergencePreferencesWindow.xib;
+			sourceTree = "<group>";
+		};
+		0711AD380F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0711AD390F65DBC7003AF147 /* English */,
+			);
+			name = EmergenceUpdatePreferencePane.xib;
+			sourceTree = "<group>";
+		};
+		07ABBA560F6C29A900824A84 /* EmergenceClientWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07ABBA570F6C29A900824A84 /* English */,
+			);
+			name = EmergenceClientWindow.xib;
+			sourceTree = "<group>";
+		};
+		07ABBB550F6C48EA00824A84 /* EmergenceServerWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07ABBB560F6C48EA00824A84 /* English */,
+			);
+			name = EmergenceServerWindow.xib;
+			sourceTree = "<group>";
+		};
+		07CACC840F5382900038EF41 /* Emergence.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07CACC850F5382900038EF41 /* English */,
+			);
+			name = Emergence.xib;
+			sourceTree = "<group>";
+		};
+		07CACC8B0F5383140038EF41 /* Emergence-InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07CACC8C0F5383140038EF41 /* English */,
+			);
+			name = "Emergence-InfoPlist.strings";
+			sourceTree = "<group>";
+		};
+		07F5AB2D0F6323330023430C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07F5AB2E0F6323330023430C /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CACC820F5382790038EF41 /* EmergenceDevelopment.xcconfig */;
+			buildSettings = {
+				VERSION_INFO_FILE = "";
+			};
+			name = Development;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CACC830F5382790038EF41 /* EmergenceRelease.xcconfig */;
+			buildSettings = {
+				VERSION_INFO_FILE = "";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CACC7F0F5382790038EF41 /* CommonDevelopment.xcconfig */;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CACC800F5382790038EF41 /* CommonRelease.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Emergence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Development */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Emergence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Development */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
