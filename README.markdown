@@ -6,8 +6,8 @@ An easy-to-use graphical frontend for Synergy.
 
 Emergence has been built, and designed, for Mac OS X 10.5 or later.
 
-In  order  to  build Emergence you will need to download Synergy and install the
-two binaries, synergyc and synergys, under the following directory:
+In  order to build Emergence you will need to [download] [1] Synergy and install
+the two binaries, synergyc and synergys, under the following directory:
 
     Synergy/synergy-1.3.1
 
@@ -37,3 +37,5 @@ Emergence  should  be  accompanied  by  a  LICENSES file containing the licenses
 relevant to this distribution.
 
 If no LICENSES exists please contact Eric Czarny <eczarny@gmail.com>.
+
+[1]: http://sourceforge.net/projects/synergy2/files/Binaries
