@@ -34,6 +34,26 @@
 #import "EmergenceUtilities.h"
 #import "EmergenceConstants.h"
 
+typedef enum {
+    SynergyClientOrientationLeft,
+    SynergyClientOrientationRight,
+    SynergyClientOrientationBoth
+} SynergyClientOrientation;
+
+#pragma mark -
+
+@interface EmergenceSynergyManager (EmergenceSynergyManagerPrivate)
+
+- (SynergyClientOrientation)clientOrientationWithLeftScreen: (NSString *)leftScreen rightScreen: (NSString *)rightScreen;
+
+#pragma mark -
+
+- (NSString *)configureClientWithScreen: (NSString *)screen orientation: (SynergyClientOrientation)orientation template: (NSString *)template;
+
+@end
+
+#pragma mark -
+
 @implementation EmergenceSynergyManager
 
 static EmergenceSynergyManager *sharedInstance = nil;
@@ -70,6 +90,60 @@ static EmergenceSynergyManager *sharedInstance = nil;
     }
     
     return sharedInstance;
+}
+
+#pragma mark -
+
+- (BOOL)configureSynergyServerWithLeftScreen: (NSString *)leftScreen rightScreen: (NSString *)rightScreen error: (NSError **)error {
+    NSString *configurationFilePath = [EmergenceUtilities synergyConfigurationFilePath];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    SynergyClientOrientation clientOrientation = [self clientOrientationWithLeftScreen: leftScreen rightScreen: rightScreen];
+    NSString *configurationTemplatePath = nil;
+    NSString *configurationTemplate = nil;
+    NSString *configurationFileContents = nil;
+    
+    error = nil;
+    
+    if ([fileManager fileExistsAtPath: configurationFilePath]) {
+        if (![fileManager removeItemAtPath: configurationFilePath error: error]) {
+            NSLog(@"Unable to remove the existing Synergy configuration file at path: %@", configurationFilePath);
+            
+            return NO;
+        }
+    }
+    
+    if (clientOrientation == SynergyClientOrientationBoth) {
+        configurationTemplatePath = [[EmergenceUtilities emergenceBundle] pathForResource: EmergenceSynegyServerConfigurationTemplate2 ofType: @"conf"];
+    } else {
+        configurationTemplatePath = [[EmergenceUtilities emergenceBundle] pathForResource: EmergenceSynegyServerConfigurationTemplate1 ofType: @"conf"];
+    }
+    
+    configurationTemplate = [NSString stringWithContentsOfFile: configurationTemplatePath encoding: NSUTF8StringEncoding error: error];
+    
+    if (!configurationTemplate) {
+        NSLog(@"Unable to load the Synergy configuration template.");
+        
+        return NO;
+    }
+    
+    configurationFileContents = [configurationTemplate stringByReplacingOccurrencesOfString: @"#screen-0" withString: [[NSProcessInfo processInfo] hostName]];
+    
+    if (clientOrientation == SynergyClientOrientationLeft) {
+        configurationFileContents = [self configureClientWithScreen: leftScreen orientation: clientOrientation template: configurationFileContents];
+    } else if (clientOrientation == SynergyClientOrientationRight) {
+        configurationFileContents = [self configureClientWithScreen: rightScreen orientation: clientOrientation template: configurationFileContents];
+    } else {
+        configurationFileContents = [configurationFileContents stringByReplacingOccurrencesOfString: @"#screen-1" withString: leftScreen];
+        configurationFileContents = [configurationFileContents stringByReplacingOccurrencesOfString: @"#screen-2" withString: rightScreen];
+    }
+    
+    if (![configurationFileContents writeToFile: configurationFilePath atomically: YES encoding: NSUTF8StringEncoding error: error]) {
+        NSLog(@"Unable to create the Synergy confiugration file.");
+        
+        return NO;
+    }
+    
+    return YES;
 }
 
 #pragma mark -
@@ -120,8 +194,6 @@ static EmergenceSynergyManager *sharedInstance = nil;
     arguments = [NSArray arrayWithObjects: synergyPath, @"-d", @"FATAL", @"-f", @"-c", [EmergenceUtilities synergyConfigurationFilePath], nil];
     
     mySynergyProcess = [[EmergenceSynergyProcess alloc] initWithArguments: arguments processType: SynergyProcessTypeServer];
-    
-    [EmergenceUtilities updateSynergyConfigurationFile];
     
     [mySynergyProcess startProcess];
 }
@@ -186,6 +258,42 @@ static EmergenceSynergyManager *sharedInstance = nil;
             NSLog(@"Unable to save the Synergy process to disk.");
         }
     }
+}
+
+@end
+
+#pragma mark -
+
+@implementation EmergenceSynergyManager (EmergenceSynergyManagerPrivate)
+
+- (SynergyClientOrientation)clientOrientationWithLeftScreen: (NSString *)leftScreen rightScreen: (NSString *)rightScreen {
+    if ((leftScreen && ![leftScreen isEqualToString: @""]) && (rightScreen && ![rightScreen isEqualToString: @""])) {
+        return SynergyClientOrientationBoth;
+    } else if (leftScreen && ![leftScreen isEqualToString: @""]) {
+        return SynergyClientOrientationLeft;
+    } else {
+        return SynergyClientOrientationRight;
+    }
+}
+
+#pragma mark -
+
+- (NSString *)configureClientWithScreen: (NSString *)screen orientation: (SynergyClientOrientation)orientation template: (NSString *)template {
+    NSString *configuration = nil;
+    
+    if (orientation == SynergyClientOrientationLeft) {
+        configuration = [template stringByReplacingOccurrencesOfString: @"#orientation" withString: @"left"];
+        configuration = [configuration stringByReplacingOccurrencesOfString: @"#opposite-orientation" withString: @"right"];
+    } else {
+        configuration = [template stringByReplacingOccurrencesOfString: @"#orientation" withString: @"right"];
+        configuration = [configuration stringByReplacingOccurrencesOfString: @"#opposite-orientation" withString: @"left"];
+    }
+    
+    configuration = [configuration stringByReplacingOccurrencesOfString: @"#screen-0" withString: @"localhost"];
+    
+    configuration = [configuration stringByReplacingOccurrencesOfString: @"#screen-1" withString: screen];
+    
+    return configuration;
 }
 
 @end

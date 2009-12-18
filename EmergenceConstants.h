@@ -71,6 +71,9 @@
 #define EmergenceSynergyClientExecutable                @"synergyc"
 #define EmergenceSynergyServerExecutable                @"synergys"
 
+#define EmergenceSynegyServerConfigurationTemplate1     @"synergy.1"
+#define EmergenceSynegyServerConfigurationTemplate2     @"synergy.2"
+
 #pragma mark -
 
 #define EmergenceApplicationBundleName                  @"CFBundleName"

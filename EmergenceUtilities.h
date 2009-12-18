@@ -64,10 +64,6 @@
 
 #pragma mark -
 
-+ (void)updateSynergyConfigurationFile;
-
-#pragma mark -
-
 + (BOOL)saveProcess: (EmergenceProcess *)process toFile: (NSString *)file;
 
 + (EmergenceProcess *)processFromFile: (NSString *)file;

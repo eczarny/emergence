@@ -100,8 +100,11 @@ static EmergenceServerWindowController *sharedInstance = nil;
 #pragma mark -
 
 - (void)startSynergyServer: (id)sender {
-    if ((![myLeftScreenHostname stringValue] || [[myLeftScreenHostname stringValue] isEqualToString: @""])
-            && (![myRightScreenHostname stringValue] || [[myRightScreenHostname stringValue] isEqualToString: @""])) {
+    NSString *leftScreen = [myLeftScreenHostname stringValue];
+    NSString *rightScreen = [myRightScreenHostname stringValue];
+    NSError *error = nil;
+    
+    if ((!leftScreen || [leftScreen isEqualToString: @""]) && (!rightScreen || [rightScreen isEqualToString: @""])) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         
         [alert addButtonWithTitle: EmergenceLocalizedString(@"OK")];
@@ -110,6 +113,12 @@ static EmergenceServerWindowController *sharedInstance = nil;
         [alert setInformativeText: EmergenceLocalizedString(@"Emergence requires the hostname, or IP address, of at least one Synergy client.")];
         
         [alert runModal];
+        
+        return;
+    }
+    
+    if (![mySynergyManager configureSynergyServerWithLeftScreen: leftScreen rightScreen: rightScreen error: &error]) {
+        [self presentError: error];
         
         return;
     }

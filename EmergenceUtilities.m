@@ -104,20 +104,9 @@
 #pragma mark -
 
 + (NSString *)synergyConfigurationFilePath {
-    NSString *synergyConfigurationFilePath = [[EmergenceUtilities applicationSupportPath] stringByAppendingPathComponent: EmergenceSynergyConfigurationFile];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *applicationSupportPath = [EmergenceUtilities applicationSupportPath];
     
-    if (![fileManager fileExistsAtPath: synergyConfigurationFilePath isDirectory: nil]) {
-        [EmergenceUtilities updateSynergyConfigurationFile];
-    }
-    
-    return synergyConfigurationFilePath;
-}
-
-#pragma mark -
-
-+ (void)updateSynergyConfigurationFile {
-    
+    return [applicationSupportPath stringByAppendingPathComponent: EmergenceSynergyConfigurationFile];
 }
 
 #pragma mark -

@@ -40,6 +40,10 @@
 
 #pragma mark -
 
+- (BOOL)configureSynergyServerWithLeftScreen: (NSString *)leftScreen rightScreen: (NSString *)rightScreen error: (NSError **)error;
+
+#pragma mark -
+
 - (void)startSynergyClientAtHostname: (NSString *)hostname;
 
 - (void)startSynergyServer;
