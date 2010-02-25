@@ -55,6 +55,7 @@
 
 #define EmergenceSynergyProcessFile                     @"Synergy Process.plist"
 #define EmergenceSynergyConfigurationFile               @"synergy.conf"
+#define EmergenceSynergyConfigurationFileExtension      @"conf"
 
 #pragma mark -
 

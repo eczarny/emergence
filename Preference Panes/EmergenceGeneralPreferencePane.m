@@ -34,7 +34,13 @@
 @implementation EmergenceGeneralPreferencePane
 
 - (void)preferencePaneDidDisplay {
+    NSInteger loginItemEnabledState = NSOffState;
     
+    if ([EmergenceUtilities isLoginItemEnabled]) {
+        loginItemEnabledState = NSOnState;
+    }
+    
+    [myLoginItemEnabled setState: loginItemEnabledState];
 }
 
 #pragma mark -
@@ -47,6 +53,16 @@
 
 - (NSImage *)icon {
     return [EmergenceUtilities imageFromBundledImageResource: @"General Preferences"];
+}
+
+#pragma mark -
+
+- (void)toggleLoginItem: (id)sender {
+    if ([myLoginItemEnabled state] == NSOnState) {
+        [EmergenceUtilities enableLoginItem];
+    } else{
+        [EmergenceUtilities disableLoginItem];
+    }
 }
 
 @end

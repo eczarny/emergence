@@ -66,8 +66,8 @@ static EmergencePreferencePaneManager *sharedInstance = nil;
 #pragma mark -
 
 - (void)loadPreferencePanes {
-    NSBundle *emergenceBundle = [EmergenceUtilities emergenceBundle];
-    NSString *path = [emergenceBundle pathForResource: EmergencePreferencePanesFile ofType: EmergencePropertyListFileExtension];
+    NSBundle *applicationBundle = [EmergenceUtilities applicationBundle];
+    NSString *path = [applicationBundle pathForResource: EmergencePreferencePanesFile ofType: EmergencePropertyListFileExtension];
     NSDictionary *preferencePaneDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     NSDictionary *preferencePanes = [preferencePaneDictionary objectForKey: EmergencePreferencePanesKey];
     NSArray *preferencePaneOrder = [preferencePaneDictionary objectForKey: EmergencePreferencePaneOrderKey];
@@ -83,7 +83,7 @@ static EmergencePreferencePaneManager *sharedInstance = nil;
         NSString *preferencePaneClassName = [preferencePanes objectForKey: preferencePaneName];
         
         if (preferencePaneClassName) {
-            Class preferencePaneClass = [emergenceBundle classNamed: preferencePaneClassName];
+            Class preferencePaneClass = [applicationBundle classNamed: preferencePaneClassName];
             
             if (preferencePaneClass) {
                 EmergencePreferencePane *preferencePane = [[preferencePaneClass alloc] init];

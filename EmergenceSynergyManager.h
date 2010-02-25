@@ -44,7 +44,7 @@
 
 #pragma mark -
 
-- (void)startSynergyClientAtHostname: (NSString *)hostname;
+- (void)startSynergyClientAtHostName: (NSString *)hostName;
 
 - (void)startSynergyServer;
 

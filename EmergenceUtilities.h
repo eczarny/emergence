@@ -40,9 +40,9 @@
     
 }
 
-+ (NSBundle *)emergenceBundle;
++ (NSBundle *)applicationBundle;
 
-+ (NSString *)emergenceVersion;
++ (NSString *)applicationVersion;
 
 #pragma mark -
 
@@ -70,6 +70,20 @@
 
 #pragma mark -
 
++ (BOOL)isLoginItemEnabled;
+
+#pragma mark -
+
++ (void)enableLoginItem;
+
++ (void)disableLoginItem;
+
+#pragma mark -
+
 + (NSImage *)imageFromBundledImageResource: (NSString *)resource;
+
+#pragma mark -
+
++ (BOOL)isStringEmpty: (NSString *)string;
 
 @end

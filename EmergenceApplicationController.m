@@ -244,11 +244,11 @@
 #pragma mark -
 
 - (void)refreshStatusMenu {
-    NSString *emergenceVersion = [EmergenceUtilities emergenceVersion];
+    NSString *applicationVersion = [EmergenceUtilities applicationVersion];
     NSString *synergyStatus = [self synergyStatus];
     
-    if (emergenceVersion) {
-        [myStatusItem setToolTip: [NSString stringWithFormat: @"Emergence %@ - %@", emergenceVersion, synergyStatus]];
+    if (applicationVersion) {
+        [myStatusItem setToolTip: [NSString stringWithFormat: @"Emergence %@ - %@", applicationVersion, synergyStatus]];
     } else {
         [myStatusItem setToolTip: [NSString stringWithFormat: @"Emergence - %@", synergyStatus]];
     }

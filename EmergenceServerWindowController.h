@@ -34,8 +34,8 @@
 
 @interface EmergenceServerWindowController : NSWindowController {
     EmergenceSynergyManager *mySynergyManager;
-    IBOutlet NSTextField *myLeftScreenHostname;
-    IBOutlet NSTextField *myRightScreenHostname;
+    IBOutlet NSTextField *myLeftScreen;
+    IBOutlet NSTextField *myRightScreen;
 }
 
 + (EmergenceServerWindowController *)sharedController;

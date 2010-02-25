@@ -218,16 +218,18 @@ static EmergencePreferencesWindowController *sharedInstance = nil;
 
 - (void)preparePreferencesWindow {
     NSWindow *preferencesWindow = [self window];
-    NSArray *preferencePanes = [myPreferencePaneManager preferencePanes];
-    id<EmergencePreferencePaneProtocol> preferencePane = [preferencePanes objectAtIndex: 0];
+    NSArray *preferencePaneOrder = [myPreferencePaneManager preferencePaneOrder];
+    NSString *preferencePaneName = [preferencePaneOrder objectAtIndex: 0];
     
-    if (!preferencePanes || !preferencePane) {
+    if (![myPreferencePaneManager preferencePanesAreReady]) {
         NSString *applicationName = [[NSBundle mainBundle] objectForInfoDictionaryKey: EmergenceApplicationBundleName];
         
         NSRunAlertPanel(EmergenceLocalizedString(@"Preferences"), [NSString stringWithFormat: EmergenceLocalizedString(@"Preferences are not available for %@."), applicationName], EmergenceLocalizedString(@"OK"), nil, nil);
     }
     
-    [self displayPreferencePaneWithName: [preferencePane name] initialPreferencePane: YES];
+    [myToolbar setSelectedItemIdentifier: preferencePaneName];
+    
+    [self displayPreferencePaneWithName: preferencePaneName initialPreferencePane: YES];
     
     [preferencesWindow center];
 }
@@ -249,7 +251,7 @@ static EmergencePreferencesWindowController *sharedInstance = nil;
         [toolbarItem setLabel: preferencePaneName];
         [toolbarItem setImage: [preferencePane icon]];
         
-        if (preferencePaneToolTip && ![preferencePaneToolTip isEqualToString: @""]) {
+        if (![EmergenceUtilities isStringEmpty: preferencePaneToolTip]) {
             [toolbarItem setToolTip: preferencePaneToolTip];
         } else {
             [toolbarItem setToolTip: nil];

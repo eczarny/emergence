@@ -107,22 +107,22 @@ static EmergenceClientWindowController *sharedInstance = nil;
 #pragma mark -
 
 - (void)startSynergyClient: (id)sender {
-    NSString *hostname = [myHostname stringValue];
+    NSString *hostName = [myHostName stringValue];
     
-    if (!hostname || [hostname isEqualToString: @""]) {
+    if ([EmergenceUtilities isStringEmpty: hostName]) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         
         [alert addButtonWithTitle: EmergenceLocalizedString(@"OK")];
         
         [alert setMessageText: EmergenceLocalizedString(@"Please provide more information.")];
-        [alert setInformativeText: EmergenceLocalizedString(@"Emergence requires the hostname, or IP address, of the Synergy server.")];
+        [alert setInformativeText: EmergenceLocalizedString(@"Emergence requires a valid hostname, or IP address, of the Synergy server.")];
         
         [alert runModal];
         
         return;
     }
     
-    [mySynergyManager startSynergyClientAtHostname: hostname];
+    [mySynergyManager startSynergyClientAtHostName: hostName];
     
     [self hideClientWindow: self];
 }

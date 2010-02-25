@@ -32,9 +32,9 @@
 #import "EmergencePreferencePane.h"
 
 @interface EmergenceGeneralPreferencePane : EmergencePreferencePane {
-    
+    IBOutlet NSButton *myLoginItemEnabled;
 }
 
-
+- (void)toggleLoginItem: (id)sender;
 
 @end

@@ -36,36 +36,32 @@
 
 + (NSString *)pathForSynergyExecutable: (NSString *)synergyExecutable;
 
-#pragma mark -
-
-+ (BOOL)isStringEmpty: (NSString *)string;
-
 @end
 
 #pragma mark -
 
 @implementation EmergenceUtilities
 
-+ (NSBundle *)emergenceBundle {
++ (NSBundle *)applicationBundle {
     return [NSBundle mainBundle];
 }
 
-+ (NSString *)emergenceVersion {
-    NSBundle *emergenceBundle = [EmergenceUtilities emergenceBundle];
-    NSString *emergenceVersion = [emergenceBundle objectForInfoDictionaryKey: EmergenceApplicationBundleShortVersionString];
++ (NSString *)applicationVersion {
+    NSBundle *applicationBundle = [EmergenceUtilities applicationBundle];
+    NSString *applicationVersion = [applicationBundle objectForInfoDictionaryKey: EmergenceApplicationBundleShortVersionString];
     
-    if (!emergenceVersion) {
-        emergenceVersion = [emergenceBundle objectForInfoDictionaryKey: EmergenceApplicationBundleVersion];
+    if (!applicationVersion) {
+        applicationVersion = [applicationBundle objectForInfoDictionaryKey: EmergenceApplicationBundleVersion];
     }
     
-    return emergenceVersion;
+    return applicationVersion;
 }
 
 #pragma mark -
 
 + (void)registerDefaults {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *path = [[EmergenceUtilities emergenceBundle] pathForResource: EmergenceDefaultPreferencesFile ofType: EmergencePropertyListFileExtension];
+    NSString *path = [[EmergenceUtilities applicationBundle] pathForResource: EmergenceDefaultPreferencesFile ofType: EmergencePropertyListFileExtension];
     NSDictionary *emergenceDefaults = [[[NSDictionary alloc] initWithContentsOfFile: path] autorelease];
     
     [defaults registerDefaults: emergenceDefaults];
@@ -125,23 +121,99 @@
 
 #pragma mark -
 
-+ (NSImage *)imageFromBundledImageResource: (NSString *)resource {
-    NSString *resourcePath = [[EmergenceUtilities emergenceBundle] pathForImageResource: resource];
++ (BOOL)isLoginItemEnabled {
+    LSSharedFileListRef sharedFileList = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+    NSString *applicationPath = [[EmergenceUtilities applicationBundle] bundlePath];
+    CFURLRef applicationPathURL= (CFURLRef)[NSURL fileURLWithPath: applicationPath];
+    BOOL result = NO;
     
-    return [[[NSImage alloc] initWithContentsOfFile: resourcePath] autorelease];
+    if (sharedFileList) {
+        NSArray *sharedFileListArray = nil;
+        UInt32 seedValue;
+        
+        sharedFileListArray = (NSArray *)LSSharedFileListCopySnapshot(sharedFileList, &seedValue);
+        
+        for (id sharedFile in sharedFileListArray) {
+            LSSharedFileListItemRef sharedFileListItem = (LSSharedFileListItemRef)sharedFile;
+            OSStatus errStatus = LSSharedFileListItemResolve(sharedFileListItem, 0, (CFURLRef *)&applicationPathURL, NULL);
+            
+            if (errStatus == noErr) {
+                NSString *resolvedApplicationPath = [(NSURL *)applicationPathURL path];
+                
+                if ([resolvedApplicationPath compare: applicationPath] == NSOrderedSame) {
+                    result = YES;
+                    
+                    break;
+                }
+            }
+        }
+        
+        [sharedFileListArray release];
+    } else {
+        NSLog(@"Unable to create the shared file list.");
+    }
+    
+    return result;
 }
-
-@end
 
 #pragma mark -
 
-@implementation EmergenceUtilities (EmergenceUtilitiesPrivate)
-
-+ (NSString *)pathForSynergyExecutable: (NSString *)synergyExecutable {
-    NSString *executablesPath = [[[EmergenceUtilities emergenceBundle] executablePath] stringByDeletingLastPathComponent];
-    NSString *synergyExecutablesPath = [executablesPath stringByAppendingPathComponent: EmergenceSynergyExecutablesDirectory];
++ (void)enableLoginItem {
+    LSSharedFileListRef sharedFileList = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+    NSString *applicationPath = [[EmergenceUtilities applicationBundle] bundlePath];
+    CFURLRef applicationPathURL= (CFURLRef)[NSURL fileURLWithPath: applicationPath];
     
-    return [synergyExecutablesPath stringByAppendingPathComponent: synergyExecutable];
+    if (sharedFileList) {
+        LSSharedFileListItemRef sharedFileListItem = LSSharedFileListInsertItemURL(sharedFileList, kLSSharedFileListItemLast, NULL, NULL, applicationPathURL, NULL, NULL);
+        
+        if (sharedFileListItem) {
+            CFRelease(sharedFileListItem);
+        }
+    } else {
+        NSLog(@"Unable to create the shared file list.");
+    }
+    
+    CFRelease(sharedFileList);
+}
+
++ (void)disableLoginItem {
+    LSSharedFileListRef sharedFileList = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+    NSString *applicationPath = [[EmergenceUtilities applicationBundle] bundlePath];
+    CFURLRef applicationPathURL= (CFURLRef)[NSURL fileURLWithPath: applicationPath];
+    
+    if (sharedFileList) {
+        NSArray *sharedFileListArray = nil;
+        UInt32 seedValue;
+        
+        sharedFileListArray = (NSArray *)LSSharedFileListCopySnapshot(sharedFileList, &seedValue);
+        
+        for (id sharedFile in sharedFileListArray) {
+            LSSharedFileListItemRef sharedFileListItem = (LSSharedFileListItemRef)sharedFile;
+            OSStatus status = LSSharedFileListItemResolve(sharedFileListItem, 0, (CFURLRef *)&applicationPathURL, NULL);
+            
+            if (status == noErr) {
+                NSString *resolvedApplicationPath = [(NSURL *)applicationPathURL path];
+                
+                if ([resolvedApplicationPath compare: applicationPath] == NSOrderedSame) {
+                    LSSharedFileListItemRemove(sharedFileList, sharedFileListItem);
+                }
+            }
+        }
+        
+        [sharedFileListArray release];
+    } else {
+        NSLog(@"Unable to create the shared file list.");
+    }
+    
+    CFRelease(sharedFileList);
+}
+
+#pragma mark -
+
++ (NSImage *)imageFromBundledImageResource: (NSString *)resource {
+    NSString *resourcePath = [[EmergenceUtilities applicationBundle] pathForImageResource: resource];
+    
+    return [[[NSImage alloc] initWithContentsOfFile: resourcePath] autorelease];
 }
 
 #pragma mark -
@@ -152,6 +224,19 @@
     }
     
     return NO;
+}
+
+@end
+
+#pragma mark -
+
+@implementation EmergenceUtilities (EmergenceUtilitiesPrivate)
+
++ (NSString *)pathForSynergyExecutable: (NSString *)synergyExecutable {
+    NSString *executablesPath = [[[EmergenceUtilities applicationBundle] executablePath] stringByDeletingLastPathComponent];
+    NSString *synergyExecutablesPath = [executablesPath stringByAppendingPathComponent: EmergenceSynergyExecutablesDirectory];
+    
+    return [synergyExecutablesPath stringByAppendingPathComponent: synergyExecutable];
 }
 
 @end
