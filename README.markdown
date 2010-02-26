@@ -31,7 +31,7 @@ Please refer to the LICENSES file for third-party license information.
 
 # License
 
-Copyright (c) 2009 Eric Czarny.
+Copyright (c) 2010 Eric Czarny.
 
 Emergence  should  be  accompanied  by  a  LICENSES file containing the licenses
 relevant to this distribution.
