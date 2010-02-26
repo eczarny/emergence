@@ -135,10 +135,13 @@
         
         for (id sharedFile in sharedFileListArray) {
             LSSharedFileListItemRef sharedFileListItem = (LSSharedFileListItemRef)sharedFile;
-            OSStatus errStatus = LSSharedFileListItemResolve(sharedFileListItem, 0, (CFURLRef *)&applicationPathURL, NULL);
             
-            if (errStatus == noErr) {
+            LSSharedFileListItemResolve(sharedFileListItem, 0, (CFURLRef *)&applicationPathURL, NULL);
+            
+            if (applicationPathURL != NULL) {
                 NSString *resolvedApplicationPath = [(NSURL *)applicationPathURL path];
+                
+                CFRelease(applicationPathURL);
                 
                 if ([resolvedApplicationPath compare: applicationPath] == NSOrderedSame) {
                     result = YES;
@@ -189,10 +192,13 @@
         
         for (id sharedFile in sharedFileListArray) {
             LSSharedFileListItemRef sharedFileListItem = (LSSharedFileListItemRef)sharedFile;
-            OSStatus status = LSSharedFileListItemResolve(sharedFileListItem, 0, (CFURLRef *)&applicationPathURL, NULL);
             
-            if (status == noErr) {
+            LSSharedFileListItemResolve(sharedFileListItem, 0, (CFURLRef *)&applicationPathURL, NULL);
+            
+            if (applicationPathURL != NULL) {
                 NSString *resolvedApplicationPath = [(NSURL *)applicationPathURL path];
+                
+                CFRelease(applicationPathURL);
                 
                 if ([resolvedApplicationPath compare: applicationPath] == NSOrderedSame) {
                     LSSharedFileListItemRemove(sharedFileList, sharedFileListItem);
