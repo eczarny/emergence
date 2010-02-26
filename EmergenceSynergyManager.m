@@ -138,7 +138,7 @@ static EmergenceSynergyManager *sharedInstance = nil;
     }
     
     if (![configuration writeToFile: configurationFilePath atomically: YES encoding: NSUTF8StringEncoding error: error]) {
-        NSLog(@"Unable to create the Synergy confiugration file.");
+        NSLog(@"Unable to create the Synergy configuration file.");
         
         return NO;
     }
