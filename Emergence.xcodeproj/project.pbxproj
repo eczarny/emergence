@@ -30,6 +30,7 @@
 		07CACC8D0F5383140038EF41 /* Emergence-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CACC8B0F5383140038EF41 /* Emergence-InfoPlist.strings */; };
 		07CACCA80F538C910038EF41 /* EmergenceApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CACCA70F538C910038EF41 /* EmergenceApplicationController.m */; };
 		07CACCB40F5391780038EF41 /* EmergenceUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CACCB30F5391780038EF41 /* EmergenceUtilities.m */; };
+		07D6C70B1139E80400F705D3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6C70A1139E80400F705D3 /* Sparkle.framework */; };
 		07E440010F5B84F600E0612F /* EmergenceSynergyProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */; };
 		07E440A70F5DFE2800E0612F /* EmergenceSynergyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E440A60F5DFE2800E0612F /* EmergenceSynergyManager.m */; };
 		07F5AB300F6323330023430C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F5AB2D0F6323330023430C /* Localizable.strings */; };
@@ -99,6 +100,7 @@
 		07CACCB00F5390F60038EF41 /* EmergenceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceConstants.h; sourceTree = "<group>"; };
 		07CACCB20F5391780038EF41 /* EmergenceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceUtilities.h; sourceTree = "<group>"; };
 		07CACCB30F5391780038EF41 /* EmergenceUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceUtilities.m; sourceTree = "<group>"; };
+		07D6C70A1139E80400F705D3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		07E43FFF0F5B84F600E0612F /* EmergenceSynergyProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceSynergyProcess.h; sourceTree = "<group>"; };
 		07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceSynergyProcess.m; sourceTree = "<group>"; };
 		07E440A50F5DFE2800E0612F /* EmergenceSynergyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceSynergyManager.h; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0711AC170F65D3EE003AF147 /* Quartz.framework in Frameworks */,
+				07D6C70B1139E80400F705D3 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +314,7 @@
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				0711AC160F65D3EE003AF147 /* Quartz.framework */,
+				07D6C70A1139E80400F705D3 /* Sparkle.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -539,6 +543,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07CACC820F5382790038EF41 /* EmergenceDevelopment.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				VERSION_INFO_FILE = "";
 			};
 			name = Development;
@@ -547,6 +555,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07CACC830F5382790038EF41 /* EmergenceRelease.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				VERSION_INFO_FILE = "";
 			};
 			name = Release;
