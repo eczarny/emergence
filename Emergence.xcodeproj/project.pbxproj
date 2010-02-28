@@ -100,7 +100,7 @@
 		07CACCB00F5390F60038EF41 /* EmergenceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceConstants.h; sourceTree = "<group>"; };
 		07CACCB20F5391780038EF41 /* EmergenceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceUtilities.h; sourceTree = "<group>"; };
 		07CACCB30F5391780038EF41 /* EmergenceUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceUtilities.m; sourceTree = "<group>"; };
-		07D6C70A1139E80400F705D3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		07D6C70A1139E80400F705D3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = /Library/Frameworks/Sparkle.framework; sourceTree = "<absolute>"; };
 		07E43FFF0F5B84F600E0612F /* EmergenceSynergyProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceSynergyProcess.h; sourceTree = "<group>"; };
 		07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceSynergyProcess.m; sourceTree = "<group>"; };
 		07E440A50F5DFE2800E0612F /* EmergenceSynergyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceSynergyManager.h; sourceTree = "<group>"; };
