@@ -100,8 +100,8 @@ static EmergenceServerWindowController *sharedInstance = nil;
 #pragma mark -
 
 - (void)startSynergyServer: (id)sender {
-    NSString *leftScreen = [myLeftScreen stringValue];
-    NSString *rightScreen = [myRightScreen stringValue];
+    NSString *leftScreen = [myLeftScreenTextField stringValue];
+    NSString *rightScreen = [myRightScreenTextField stringValue];
     
     if ([EmergenceUtilities isStringEmpty: leftScreen] && [EmergenceUtilities isStringEmpty: rightScreen]) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];

@@ -259,9 +259,13 @@
 #pragma mark -
 
 - (void)createStatusItem {
+    NSFont *titleFont = [NSFont fontWithName: @"Lucida Grande" size: 18.0];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:titleFont forKey: NSFontAttributeName];
+    NSAttributedString *title = [[[NSAttributedString alloc] initWithString: @"\u2756" attributes: attributes] autorelease];
+    
     myStatusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength: NSVariableStatusItemLength] retain];
     
-    [myStatusItem setTitle: @"Emergence"];
+    [myStatusItem setAttributedTitle: title];
     [myStatusItem setHighlightMode: YES];
     
     [self refreshStatusMenu];

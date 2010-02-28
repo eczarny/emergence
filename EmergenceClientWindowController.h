@@ -34,7 +34,7 @@
 
 @interface EmergenceClientWindowController : NSWindowController {
     EmergenceSynergyManager *mySynergyManager;
-    IBOutlet NSTextField *myHostName;
+    IBOutlet NSTextField *myHostNameTextField;
 }
 
 + (EmergenceClientWindowController *)sharedController;

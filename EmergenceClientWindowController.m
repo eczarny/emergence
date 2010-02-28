@@ -107,7 +107,7 @@ static EmergenceClientWindowController *sharedInstance = nil;
 #pragma mark -
 
 - (void)startSynergyClient: (id)sender {
-    NSString *hostName = [myHostName stringValue];
+    NSString *hostName = [myHostNameTextField stringValue];
     
     if ([EmergenceUtilities isStringEmpty: hostName]) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
