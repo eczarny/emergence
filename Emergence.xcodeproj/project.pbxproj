@@ -31,6 +31,7 @@
 		07CACCA80F538C910038EF41 /* EmergenceApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CACCA70F538C910038EF41 /* EmergenceApplicationController.m */; };
 		07CACCB40F5391780038EF41 /* EmergenceUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CACCB30F5391780038EF41 /* EmergenceUtilities.m */; };
 		07D6C70B1139E80400F705D3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6C70A1139E80400F705D3 /* Sparkle.framework */; };
+		07D6C7381139FCCE00F705D3 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6C70A1139E80400F705D3 /* Sparkle.framework */; };
 		07E440010F5B84F600E0612F /* EmergenceSynergyProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */; };
 		07E440A70F5DFE2800E0612F /* EmergenceSynergyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E440A60F5DFE2800E0612F /* EmergenceSynergyManager.m */; };
 		07F5AB300F6323330023430C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F5AB2D0F6323330023430C /* Localizable.strings */; };
@@ -52,6 +53,17 @@
 				0788308E0F5399680073DDC6 /* synergys in Copy Synergy Executables */,
 			);
 			name = "Copy Synergy Executables";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07D6C7391139FCEC00F705D3 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07D6C7381139FCCE00F705D3 /* Sparkle.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -390,6 +402,7 @@
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Emergence" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
+				07D6C7391139FCEC00F705D3 /* Copy Frameworks */,
 				0733F2100F54D2D800A6E60F /* Copy Synergy Executables */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,

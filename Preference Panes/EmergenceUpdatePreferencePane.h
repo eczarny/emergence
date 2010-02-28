@@ -32,9 +32,10 @@
 #import "EmergencePreferencePane.h"
 
 @interface EmergenceUpdatePreferencePane : EmergencePreferencePane {
-    
+    IBOutlet NSButton *myCheckForUpdatesButton;
+    IBOutlet SUUpdater *mySparkleUpdater;
 }
 
-
+- (void)toggleCheckForUpdates: (id)sender;
 
 @end
