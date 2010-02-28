@@ -393,6 +393,7 @@
 				0733F2100F54D2D800A6E60F /* Copy Synergy Executables */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				07D6C7151139F25E00F705D3 /* Run Script: Include Git commit hash */,
 			);
 			buildRules = (
 			);
@@ -447,6 +448,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07D6C7151139F25E00F705D3 /* Run Script: Include Git commit hash */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script: Include Git commit hash";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/bin/ruby;
+			shellScript = "raise \"Must be executed from within Xcode.\" unless ENV['XCODE_VERSION_ACTUAL']\n\ninfo_plist = \"#{ENV['BUILT_PRODUCTS_DIR']}/#{ENV['WRAPPER_NAME']}/Contents/Info.plist\"\n\ncommit = `/usr/local/bin/git rev-parse --short HEAD`.chomp!\nlines = IO.readlines(info_plist).join\n\nlines.gsub! /(<key>CFBundleVersion<\\/key>\\n\\t<string>).*?(<\\/string>)/, \"\\\\1#{commit}\\\\2\"\n\nFile.open(info_plist, 'w') { |f| f.puts lines }";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
