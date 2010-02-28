@@ -14,6 +14,13 @@ the two binaries, synergyc and synergys, under the following directory:
 The Xcode project depends on the Synergy binaries being at this location so that
 Emergence includes them within its application bundle.
 
+Besides Synergy, the only other dependency is [Sparkle] [1]. Please download and
+install the Sparkle framework to:
+
+    /Library/Frameworks/
+
+If everything worked the Xcode build should succeed.
+
 # What if I find a bug, or what if I want to help?
 
 Please, contact me with any questions, comments, suggestions, or problems. I try
@@ -39,3 +46,4 @@ relevant to this distribution.
 If no LICENSES exists please contact Eric Czarny <eczarny@gmail.com>.
 
 [1]: http://sourceforge.net/projects/synergy2/files/Binaries
+[2]: http://sparkle.andymatuschak.org/
