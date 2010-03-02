@@ -26,8 +26,6 @@
 	<string>Emergence</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2009 Divisible by Zero</string>
 	<key>LSUIElement</key>
 	<true/>
 	<key>SUFeedURL</key>
