@@ -33,7 +33,7 @@
 
 @class EmergencePreferencePaneManager;
 
-@interface EmergencePreferencesWindowController : NSWindowController {
+@interface EmergencePreferencesWindowController : NSWindowController<NSToolbarDelegate> {
     EmergencePreferencePaneManager *myPreferencePaneManager;
     NSToolbar *myToolbar;
     NSMutableDictionary *myToolbarItems;
