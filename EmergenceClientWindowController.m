@@ -112,10 +112,10 @@ static EmergenceClientWindowController *sharedInstance = nil;
     if ([EmergenceUtilities isStringEmpty: hostName]) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         
-        [alert addButtonWithTitle: EmergenceLocalizedString(@"OK")];
+        [alert addButtonWithTitle: ZeroKitLocalizedString(@"OK")];
         
-        [alert setMessageText: EmergenceLocalizedString(@"Please provide more information.")];
-        [alert setInformativeText: EmergenceLocalizedString(@"Emergence requires a valid hostname, or IP address, of the Synergy server.")];
+        [alert setMessageText: ZeroKitLocalizedString(@"Please provide more information.")];
+        [alert setInformativeText: ZeroKitLocalizedString(@"Emergence requires a valid hostname, or IP address, of the Synergy server.")];
         
         [alert runModal];
         

@@ -33,7 +33,7 @@
 
 @implementation EmergenceGeneralPreferencePane
 
-- (void)preferencePaneDidDisplay {
+- (void)preferencePaneDidLoad {
     NSInteger loginItemEnabledState = NSOffState;
     
     if ([EmergenceUtilities isLoginItemEnabled]) {
@@ -46,13 +46,25 @@
 #pragma mark -
 
 - (NSString *)name {
-    return @"General";
+    return ZeroKitLocalizedString(@"General");
 }
 
 #pragma mark -
 
 - (NSImage *)icon {
     return [EmergenceUtilities imageFromBundledImageResource: @"General Preferences"];
+}
+
+#pragma mark -
+
+- (NSString *)toolTip {
+    return nil;
+}
+
+#pragma mark -
+
+- (NSView *)view {
+    return myView;
 }
 
 #pragma mark -

@@ -29,7 +29,6 @@
 // 
 
 #import "EmergenceApplicationController.h"
-#import "EmergencePreferencesWindowController.h"
 #import "EmergenceClientWindowController.h"
 #import "EmergenceServerWindowController.h"
 #import "EmergenceSynergyManager.h"
@@ -76,7 +75,6 @@
 
 - (id)init {
     if (self = [super init]) {
-        myPreferencesWindowController = [EmergencePreferencesWindowController sharedController];
         myClientWindowController = [EmergenceClientWindowController sharedController];
         myServerWindowController = [EmergenceServerWindowController sharedController];
         mySynergyManager = [EmergenceSynergyManager sharedManager];
@@ -117,7 +115,7 @@
 #pragma mark -
 
 - (void)togglePreferencesWindow: (id)sender {
-    [myPreferencesWindowController togglePreferencesWindow: sender];
+    [[ZeroKitPreferencesWindowController sharedController] togglePreferencesWindow: sender];
 }
 
 #pragma mark -
@@ -158,11 +156,11 @@
     NSString *status;
     
     if ([mySynergyManager isSynergyClientRunning]) {
-        status = EmergenceLocalizedString(@"Synergy client is running");
+        status = ZeroKitLocalizedString(@"Synergy client is running");
     } else if ([mySynergyManager isSynergyServerRunning]) {
-        status = EmergenceLocalizedString(@"Synergy server is running");
+        status = ZeroKitLocalizedString(@"Synergy server is running");
     } else {
-        status = EmergenceLocalizedString(@"Synergy is idle");
+        status = ZeroKitLocalizedString(@"Synergy is idle");
     }
     
     return status;
@@ -185,12 +183,12 @@
 - (NSMenuItem *)synergyClientItem {
     NSMenuItem *menuItem = [[[NSMenuItem alloc] init] autorelease];
     
-    [menuItem setTitle: EmergenceLocalizedString(@"Start the Synergy Client...")];
+    [menuItem setTitle: ZeroKitLocalizedString(@"Start the Synergy Client...")];
     
     if ([mySynergyManager isSynergyServerRunning]) {
         [menuItem setAction: NULL];
     } else if ([mySynergyManager isSynergyClientRunning]) {
-        [menuItem setTitle: EmergenceLocalizedString(@"Stop the Synergy Client")];
+        [menuItem setTitle: ZeroKitLocalizedString(@"Stop the Synergy Client")];
         
         [menuItem setAction: @selector(stopSynergy:)];
     } else {
@@ -203,12 +201,12 @@
 - (NSMenuItem *)synergyServerItem {
     NSMenuItem *menuItem = [[[NSMenuItem alloc] init] autorelease];
     
-    [menuItem setTitle: EmergenceLocalizedString(@"Start the Synergy Server...")];
+    [menuItem setTitle: ZeroKitLocalizedString(@"Start the Synergy Server...")];
     
     if ([mySynergyManager isSynergyClientRunning]) {
         [menuItem setAction: NULL];
     } else if ([mySynergyManager isSynergyServerRunning]) {
-        [menuItem setTitle: EmergenceLocalizedString(@"Stop the Synergy Server")];
+        [menuItem setTitle: ZeroKitLocalizedString(@"Stop the Synergy Server")];
         
         [menuItem setAction: @selector(stopSynergy:)];
     } else {
@@ -223,7 +221,7 @@
 - (NSMenu *)statusItemMenu {
     NSMenu *statusItemMenu = [[[NSMenu alloc] init] autorelease];
     
-    [statusItemMenu addItemWithTitle: EmergenceLocalizedString(@"About Emergence") action: @selector(orderFrontStandardAboutPanel:) keyEquivalent: @""];
+    [statusItemMenu addItemWithTitle: ZeroKitLocalizedString(@"About Emergence") action: @selector(orderFrontStandardAboutPanel:) keyEquivalent: @""];
     [statusItemMenu addItem: [NSMenuItem separatorItem]];
     
     [statusItemMenu addItem: [self synergyStatusItem]];
@@ -234,9 +232,9 @@
     [statusItemMenu addItem: [self synergyServerItem]];
     
     [statusItemMenu addItem: [NSMenuItem separatorItem]];
-    [statusItemMenu addItemWithTitle: EmergenceLocalizedString(@"Preferences...") action: @selector(togglePreferencesWindow:) keyEquivalent: @""];
+    [statusItemMenu addItemWithTitle: ZeroKitLocalizedString(@"Preferences...") action: @selector(togglePreferencesWindow:) keyEquivalent: @""];
     [statusItemMenu addItem: [NSMenuItem separatorItem]];
-    [statusItemMenu addItemWithTitle: EmergenceLocalizedString(@"Quit Emergence") action: @selector(terminate:) keyEquivalent: @""];
+    [statusItemMenu addItemWithTitle: ZeroKitLocalizedString(@"Quit Emergence") action: @selector(terminate:) keyEquivalent: @""];
     
     return statusItemMenu;
 }

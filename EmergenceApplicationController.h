@@ -33,7 +33,6 @@
 @class EmergencePreferencesWindowController, EmergenceClientWindowController, EmergenceServerWindowController, EmergenceSynergyManager;
 
 @interface EmergenceApplicationController : NSObject {
-    EmergencePreferencesWindowController *myPreferencesWindowController;
     EmergenceClientWindowController *myClientWindowController;
     EmergenceServerWindowController *myServerWindowController;
     EmergenceSynergyManager *mySynergyManager;

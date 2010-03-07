@@ -33,7 +33,7 @@
 
 @implementation EmergenceUpdatePreferencePane
 
-- (void)preferencePaneDidDisplay {
+- (void)preferencePaneDidLoad {
     if ([mySparkleUpdater automaticallyChecksForUpdates]) {
         [myCheckForUpdatesButton setState: NSOnState];
     } else {
@@ -44,13 +44,25 @@
 #pragma mark -
 
 - (NSString *)name {
-    return @"Update";
+    return ZeroKitLocalizedString(@"Update");
 }
 
 #pragma mark -
 
 - (NSImage *)icon {
     return [EmergenceUtilities imageFromBundledImageResource: @"Update Preferences"];
+}
+
+#pragma mark -
+
+- (NSString *)toolTip {
+    return nil;
+}
+
+#pragma mark -
+
+- (NSView *)view {
+    return myView;
 }
 
 #pragma mark -

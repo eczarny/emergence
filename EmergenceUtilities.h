@@ -30,29 +30,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define EmergenceLocalizedString(string) NSLocalizedString(string, string)
-
-#pragma mark -
-
 @class EmergenceProcess;
 
-@interface EmergenceUtilities : NSObject {
+@interface EmergenceUtilities : ZeroKitUtilities {
     
 }
-
-+ (NSBundle *)applicationBundle;
-
-+ (NSString *)applicationVersion;
-
-#pragma mark -
-
-+ (void)registerDefaults;
-
-#pragma mark -
-
-+ (NSString *)applicationSupportPath;
-
-#pragma mark -
 
 + (NSString *)synergyClientPath;
 
@@ -67,23 +49,5 @@
 + (BOOL)saveProcess: (EmergenceProcess *)process toFile: (NSString *)file;
 
 + (EmergenceProcess *)processFromFile: (NSString *)file;
-
-#pragma mark -
-
-+ (BOOL)isLoginItemEnabled;
-
-#pragma mark -
-
-+ (void)enableLoginItem;
-
-+ (void)disableLoginItem;
-
-#pragma mark -
-
-+ (NSImage *)imageFromBundledImageResource: (NSString *)resource;
-
-#pragma mark -
-
-+ (BOOL)isStringEmpty: (NSString *)string;
 
 @end

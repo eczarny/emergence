@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		0703BBFA0F561FF600E585BF /* synergyc in Copy Synergy Executables */ = {isa = PBXBuildFile; fileRef = 0788308B0F5399680073DDC6 /* synergyc */; };
 		0703BC5B0F575EE400E585BF /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0703BC5A0F575EE400E585BF /* Defaults.plist */; };
-		0711AC0A0F65D13B003AF147 /* EmergencePreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711AC090F65D13B003AF147 /* EmergencePreferencePane.m */; };
-		0711AC0F0F65D238003AF147 /* EmergencePreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711AC0E0F65D238003AF147 /* EmergencePreferencesWindowController.m */; };
-		0711AC120F65D335003AF147 /* EmergencePreferencePaneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711AC110F65D335003AF147 /* EmergencePreferencePaneManager.m */; };
 		0711AC170F65D3EE003AF147 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0711AC160F65D3EE003AF147 /* Quartz.framework */; };
 		0711ACC40F65D767003AF147 /* EmergenceGeneralPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711ACC10F65D767003AF147 /* EmergenceGeneralPreferencePane.m */; };
 		0711ACC50F65D767003AF147 /* EmergenceUpdatePreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0711ACC30F65D767003AF147 /* EmergenceUpdatePreferencePane.m */; };
@@ -21,6 +18,8 @@
 		0711AD3A0F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD340F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib */; };
 		0711AD3B0F65DBC7003AF147 /* EmergencePreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD360F65DBC7003AF147 /* EmergencePreferencesWindow.xib */; };
 		0711AD3C0F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD380F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib */; };
+		071585DD1143403F003D3454 /* ZeroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071585DC1143403F003D3454 /* ZeroKit.framework */; };
+		071585F81143418E003D3454 /* ZeroKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 071585DC1143403F003D3454 /* ZeroKit.framework */; };
 		071C2420113CABC2006A905B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 071C241E113CABC2006A905B /* InfoPlist.strings */; };
 		0788308E0F5399680073DDC6 /* synergys in Copy Synergy Executables */ = {isa = PBXBuildFile; fileRef = 0788308C0F5399680073DDC6 /* synergys */; };
 		07ABBA480F6C245300824A84 /* EmergenceClientWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ABBA470F6C245300824A84 /* EmergenceClientWindowController.m */; };
@@ -62,6 +61,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				07D6C7381139FCCE00F705D3 /* Sparkle.framework in Copy Frameworks */,
+				071585F81143418E003D3454 /* ZeroKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,13 +70,6 @@
 
 /* Begin PBXFileReference section */
 		0703BC5A0F575EE400E585BF /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = "Resources/Property Lists/Defaults.plist"; sourceTree = "<group>"; };
-		0711AC080F65D13B003AF147 /* EmergencePreferencePane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencePreferencePane.h; sourceTree = "<group>"; };
-		0711AC090F65D13B003AF147 /* EmergencePreferencePane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencePreferencePane.m; sourceTree = "<group>"; };
-		0711AC0C0F65D1AB003AF147 /* EmergencePreferencePaneProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencePreferencePaneProtocol.h; sourceTree = "<group>"; };
-		0711AC0D0F65D238003AF147 /* EmergencePreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencePreferencesWindowController.h; sourceTree = "<group>"; };
-		0711AC0E0F65D238003AF147 /* EmergencePreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencePreferencesWindowController.m; sourceTree = "<group>"; };
-		0711AC100F65D335003AF147 /* EmergencePreferencePaneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencePreferencePaneManager.h; sourceTree = "<group>"; };
-		0711AC110F65D335003AF147 /* EmergencePreferencePaneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencePreferencePaneManager.m; sourceTree = "<group>"; };
 		0711AC160F65D3EE003AF147 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 		0711ACC00F65D767003AF147 /* EmergenceGeneralPreferencePane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmergenceGeneralPreferencePane.h; path = "Preference Panes/EmergenceGeneralPreferencePane.h"; sourceTree = "<group>"; };
 		0711ACC10F65D767003AF147 /* EmergenceGeneralPreferencePane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmergenceGeneralPreferencePane.m; path = "Preference Panes/EmergenceGeneralPreferencePane.m"; sourceTree = "<group>"; };
@@ -88,6 +81,7 @@
 		0711AD350F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceGeneralPreferencePane.xib; sourceTree = "<group>"; };
 		0711AD370F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergencePreferencesWindow.xib; sourceTree = "<group>"; };
 		0711AD390F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceUpdatePreferencePane.xib; sourceTree = "<group>"; };
+		071585DC1143403F003D3454 /* ZeroKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZeroKit.framework; path = Library/Frameworks/ZeroKit.framework; sourceTree = SDKROOT; };
 		071C241F113CABC2006A905B /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Languages/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0788308B0F5399680073DDC6 /* synergyc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = synergyc; path = "Synergy/synergy-1.3.1/synergyc"; sourceTree = "<group>"; };
 		0788308C0F5399680073DDC6 /* synergys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = synergys; path = "Synergy/synergy-1.3.1/synergys"; sourceTree = "<group>"; };
@@ -138,20 +132,13 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0711AC170F65D3EE003AF147 /* Quartz.framework in Frameworks */,
 				07D6C70B1139E80400F705D3 /* Sparkle.framework in Frameworks */,
+				071585DD1143403F003D3454 /* ZeroKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0711AC0B0F65D192003AF147 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				0711AC0C0F65D1AB003AF147 /* EmergencePreferencePaneProtocol.h */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
 		0711ACCE0F65D838003AF147 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,8 +226,6 @@
 				07CACCA70F538C910038EF41 /* EmergenceApplicationController.m */,
 				07ABBA460F6C245300824A84 /* EmergenceClientWindowController.h */,
 				07ABBA470F6C245300824A84 /* EmergenceClientWindowController.m */,
-				0711AC0D0F65D238003AF147 /* EmergencePreferencesWindowController.h */,
-				0711AC0E0F65D238003AF147 /* EmergencePreferencesWindowController.m */,
 				07ABBB5A0F6C494900824A84 /* EmergenceServerWindowController.h */,
 				07ABBB5B0F6C494900824A84 /* EmergenceServerWindowController.m */,
 			);
@@ -251,9 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				07B56D470FB3BD5300102C8C /* Delegates */,
-				0711AC0B0F65D192003AF147 /* Protocols */,
-				0711AC080F65D13B003AF147 /* EmergencePreferencePane.h */,
-				0711AC090F65D13B003AF147 /* EmergencePreferencePane.m */,
 				2DB0A2970FB3239D00C3BF79 /* EmergenceProcess.h */,
 				2DB0A2980FB3239D00C3BF79 /* EmergenceProcess.m */,
 				07E43FFF0F5B84F600E0612F /* EmergenceSynergyProcess.h */,
@@ -272,8 +254,6 @@
 		07CACCA40F538C6C0038EF41 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0711AC100F65D335003AF147 /* EmergencePreferencePaneManager.h */,
-				0711AC110F65D335003AF147 /* EmergencePreferencePaneManager.m */,
 				07E440A50F5DFE2800E0612F /* EmergenceSynergyManager.h */,
 				07E440A60F5DFE2800E0612F /* EmergenceSynergyManager.m */,
 				07CACCB20F5391780038EF41 /* EmergenceUtilities.h */,
@@ -327,6 +307,7 @@
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				0711AC160F65D3EE003AF147 /* Quartz.framework */,
 				07D6C70A1139E80400F705D3 /* Sparkle.framework */,
+				071585DC1143403F003D3454 /* ZeroKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -487,9 +468,6 @@
 				07CACCA80F538C910038EF41 /* EmergenceApplicationController.m in Sources */,
 				07ABBA480F6C245300824A84 /* EmergenceClientWindowController.m in Sources */,
 				0711ACC40F65D767003AF147 /* EmergenceGeneralPreferencePane.m in Sources */,
-				0711AC0A0F65D13B003AF147 /* EmergencePreferencePane.m in Sources */,
-				0711AC120F65D335003AF147 /* EmergencePreferencePaneManager.m in Sources */,
-				0711AC0F0F65D238003AF147 /* EmergencePreferencesWindowController.m in Sources */,
 				2DB0A2990FB3239D00C3BF79 /* EmergenceProcess.m in Sources */,
 				07ABBB5C0F6C494900824A84 /* EmergenceServerWindowController.m in Sources */,
 				07E440A70F5DFE2800E0612F /* EmergenceSynergyManager.m in Sources */,

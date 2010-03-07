@@ -106,10 +106,10 @@ static EmergenceServerWindowController *sharedInstance = nil;
     if ([EmergenceUtilities isStringEmpty: leftScreen] && [EmergenceUtilities isStringEmpty: rightScreen]) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         
-        [alert addButtonWithTitle: EmergenceLocalizedString(@"OK")];
+        [alert addButtonWithTitle: ZeroKitLocalizedString(@"OK")];
         
-        [alert setMessageText: EmergenceLocalizedString(@"Please provide more information.")];
-        [alert setInformativeText: EmergenceLocalizedString(@"Emergence requires a valid hostname, or IP address, of at least one Synergy client.")];
+        [alert setMessageText: ZeroKitLocalizedString(@"Please provide more information.")];
+        [alert setInformativeText: ZeroKitLocalizedString(@"Emergence requires a valid hostname, or IP address, of at least one Synergy client.")];
         
         [alert runModal];
         
@@ -119,10 +119,10 @@ static EmergenceServerWindowController *sharedInstance = nil;
     if (![mySynergyManager configureSynergyServerWithLeftScreen: leftScreen rightScreen: rightScreen error: nil]) {
         NSAlert *alert = [[[NSAlert alloc] init] autorelease];
         
-        [alert addButtonWithTitle: EmergenceLocalizedString(@"OK")];
+        [alert addButtonWithTitle: ZeroKitLocalizedString(@"OK")];
         
-        [alert setMessageText: EmergenceLocalizedString(@"Unable to configure the Synergy server.")];
-        [alert setInformativeText: EmergenceLocalizedString(@"There was a problem configuring the Synergy server, please try again.")];
+        [alert setMessageText: ZeroKitLocalizedString(@"Unable to configure the Synergy server.")];
+        [alert setInformativeText: ZeroKitLocalizedString(@"There was a problem configuring the Synergy server, please try again.")];
         
         [alert runModal];
         
