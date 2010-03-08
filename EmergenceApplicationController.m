@@ -259,7 +259,7 @@
 - (void)createStatusItem {
     myStatusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength: NSVariableStatusItemLength] retain];
     
-    [myStatusItem setTitle: @"Emergence"];
+    [myStatusItem setTitle: @"eM"];
     [myStatusItem setHighlightMode: YES];
     
     [self refreshStatusMenu];
