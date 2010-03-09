@@ -39,19 +39,10 @@
 #define EmergenceNibName                                @"Emergence"
 #define EmergenceClientWindowNibName                    @"EmergenceClientWindow"
 #define EmergenceServerWindowNibName                    @"EmergenceServerWindow"
-#define EmergencePreferencesWindowNibName               @"EmergencePreferencesWindow"
-#define EmergencePreferencePaneNibNameEnding            @"PreferencePane"
 
 #pragma mark -
 
-#define EmergencePreferencePanesFile                    @"PreferencePanes"
-#define EmergencePreferencePanesKey                     @"Preference Panes"
-#define EmergencePreferencePaneOrderKey                 @"Preference Pane Order"
-
 #define EmergenceDefaultPreferencesFile                 @"Defaults"
-#define EmergenceSynergyHostnameKey                     @"SynergyHostname"
-#define EmergenceSynergyLeftScreenHostnameKey           @"SynergyLeftScreenHostname"
-#define EmergenceSynergyRightScreenHostnameKey          @"SynergyRightScreenHostname"
 
 #define EmergenceSynergyProcessFile                     @"Synergy Process.plist"
 #define EmergenceSynergyConfigurationFile               @"synergy.conf"
