@@ -16,7 +16,6 @@
 		0711ACD30F65D84E003AF147 /* Update Preferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0711ACD10F65D84E003AF147 /* Update Preferences.tiff */; };
 		0711ACD50F65D885003AF147 /* PreferencePanes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0711ACD40F65D885003AF147 /* PreferencePanes.plist */; };
 		0711AD3A0F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD340F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib */; };
-		0711AD3B0F65DBC7003AF147 /* EmergencePreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD360F65DBC7003AF147 /* EmergencePreferencesWindow.xib */; };
 		0711AD3C0F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0711AD380F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib */; };
 		071585DD1143403F003D3454 /* ZeroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071585DC1143403F003D3454 /* ZeroKit.framework */; };
 		071585F81143418E003D3454 /* ZeroKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 071585DC1143403F003D3454 /* ZeroKit.framework */; };
@@ -79,7 +78,6 @@
 		0711ACD10F65D84E003AF147 /* Update Preferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "Update Preferences.tiff"; path = "Resources/Images/Icons/Toolbar Icons/Update Preferences.tiff"; sourceTree = "<group>"; };
 		0711ACD40F65D885003AF147 /* PreferencePanes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreferencePanes.plist; path = "Resources/Property Lists/PreferencePanes.plist"; sourceTree = "<group>"; };
 		0711AD350F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceGeneralPreferencePane.xib; sourceTree = "<group>"; };
-		0711AD370F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergencePreferencesWindow.xib; sourceTree = "<group>"; };
 		0711AD390F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceUpdatePreferencePane.xib; sourceTree = "<group>"; };
 		071585DC1143403F003D3454 /* ZeroKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZeroKit.framework; path = Library/Frameworks/ZeroKit.framework; sourceTree = SDKROOT; };
 		071C241F113CABC2006A905B /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Languages/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 				07CACC840F5382900038EF41 /* Emergence.xib */,
 				07ABBA560F6C29A900824A84 /* EmergenceClientWindow.xib */,
 				0711AD340F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib */,
-				0711AD360F65DBC7003AF147 /* EmergencePreferencesWindow.xib */,
 				07ABBB550F6C48EA00824A84 /* EmergenceServerWindow.xib */,
 				0711AD380F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib */,
 			);
@@ -428,7 +425,6 @@
 				07CACC860F5382900038EF41 /* Emergence.xib in Resources */,
 				07ABBA580F6C29A900824A84 /* EmergenceClientWindow.xib in Resources */,
 				0711AD3A0F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib in Resources */,
-				0711AD3B0F65DBC7003AF147 /* EmergencePreferencesWindow.xib in Resources */,
 				07ABBB570F6C48EA00824A84 /* EmergenceServerWindow.xib in Resources */,
 				0711AD3C0F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib in Resources */,
 				0711ACD20F65D84E003AF147 /* General Preferences.tiff in Resources */,
@@ -487,14 +483,6 @@
 				0711AD350F65DBC7003AF147 /* English */,
 			);
 			name = EmergenceGeneralPreferencePane.xib;
-			sourceTree = "<group>";
-		};
-		0711AD360F65DBC7003AF147 /* EmergencePreferencesWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0711AD370F65DBC7003AF147 /* English */,
-			);
-			name = EmergencePreferencesWindow.xib;
 			sourceTree = "<group>";
 		};
 		0711AD380F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib */ = {
