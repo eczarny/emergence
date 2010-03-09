@@ -302,46 +302,6 @@
 					<int key="connectionID">74</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: values.SynergyLeftScreen</string>
-						<reference key="source" ref="105716366"/>
-						<reference key="destination" ref="586198951"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="105716366"/>
-							<reference key="NSDestination" ref="586198951"/>
-							<string key="NSLabel">value: values.SynergyLeftScreen</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">values.SynergyLeftScreen</string>
-							<object class="NSDictionary" key="NSOptions">
-								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
-								<boolean value="YES" key="NS.object.0"/>
-							</object>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">93</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: values.SynergyRightScreen</string>
-						<reference key="source" ref="480808455"/>
-						<reference key="destination" ref="586198951"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="480808455"/>
-							<reference key="NSDestination" ref="586198951"/>
-							<string key="NSLabel">value: values.SynergyRightScreen</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">values.SynergyRightScreen</string>
-							<object class="NSDictionary" key="NSOptions">
-								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
-								<boolean value="YES" key="NS.object.0"/>
-							</object>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">94</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">myLeftScreenTextField</string>
 						<reference key="source" ref="1001"/>
@@ -356,6 +316,46 @@
 						<reference key="destination" ref="480808455"/>
 					</object>
 					<int key="connectionID">96</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: values.SynergyLeftScreenHostName</string>
+						<reference key="source" ref="105716366"/>
+						<reference key="destination" ref="586198951"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="105716366"/>
+							<reference key="NSDestination" ref="586198951"/>
+							<string key="NSLabel">value: values.SynergyLeftScreenHostName</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">values.SynergyLeftScreenHostName</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">97</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: values.SynergyRightScreenHostName</string>
+						<reference key="source" ref="480808455"/>
+						<reference key="destination" ref="586198951"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="480808455"/>
+							<reference key="NSDestination" ref="586198951"/>
+							<string key="NSLabel">value: values.SynergyRightScreenHostName</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">values.SynergyRightScreenHostName</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">98</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -398,7 +398,7 @@
 							<reference ref="564860541"/>
 						</object>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Synergy Server</string>
+						<string key="objectName">Synergy Server Window</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">57</int>
@@ -594,7 +594,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">96</int>
+			<int key="maxID">98</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

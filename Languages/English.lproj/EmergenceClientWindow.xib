@@ -50,7 +50,7 @@
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>
 				<object class="NSView" key="NSWindowView" id="428201806">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -59,6 +59,7 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{17, 63}, {233, 17}}</string>
 							<reference key="NSSuperview" ref="428201806"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="982808084">
 								<int key="NSCellFlags">68288064</int>
@@ -95,13 +96,13 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{255, 60}, {250, 22}}</string>
 							<reference key="NSSuperview" ref="428201806"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="929149197">
 								<int key="NSCellFlags">-1804468671</int>
 								<int key="NSCellFlags2">66560</int>
 								<string key="NSContents"/>
 								<reference key="NSSupport" ref="1030176713"/>
-								<string key="NSPlaceholderString">localhost</string>
 								<reference key="NSControlView" ref="638406730"/>
 								<bool key="NSDrawsBackground">YES</bool>
 								<object class="NSColor" key="NSBackgroundColor">
@@ -126,6 +127,7 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{415, 12}, {96, 32}}</string>
 							<reference key="NSSuperview" ref="428201806"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="881925000">
 								<int key="NSCellFlags">67239424</int>
@@ -146,6 +148,7 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{319, 12}, {96, 32}}</string>
 							<reference key="NSSuperview" ref="428201806"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="413194941">
 								<int key="NSCellFlags">67239424</int>
@@ -163,6 +166,8 @@
 						</object>
 					</object>
 					<string key="NSFrameSize">{525, 102}</string>
+					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMaxSize">{3.40282e+38, 3.40282e+38}</string>
@@ -263,7 +268,7 @@
 							<reference ref="428201806"/>
 						</object>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Synergy Client</string>
+						<string key="objectName">Synergy Client Window</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">2</int>
