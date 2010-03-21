@@ -104,9 +104,21 @@
 #pragma mark -
 
 - (void)process: (EmergenceProcess *)process didReceiveData: (NSData *)data {
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     NSString *output = [[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease];
+    NSRange range;
     
     NSLog(@"The Synergy process received data: %@", output);
+    
+    range = [output rangeOfString: EmergenceSynergyConnectionRefusedString];
+    
+    if (range.location != NSNotFound) {
+        NSLog(@"The Synergy connection has been refused.");
+        
+        [self stopProcess];
+        
+        [notificationCenter postNotificationName: EmergenceSynergyConnectionRefusedNotification object: self];
+    }
 }
 
 @end

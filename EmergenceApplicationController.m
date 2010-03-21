@@ -67,6 +67,10 @@
 
 - (void)menuDidSendAction: (NSNotification *)notification;
 
+#pragma mark -
+
+- (void)displayRefusedConnectionAlert;
+
 @end
 
 #pragma mark -
@@ -105,6 +109,11 @@
                              object: nil];
     
     [notificationCenter addObserver: self
+                           selector: @selector(displayRefusedConnectionAlert)
+                               name: EmergenceSynergyConnectionRefusedNotification
+                             object: nil];
+    
+    [notificationCenter addObserver: self
                            selector: @selector(menuDidSendAction:)
                                name: NSMenuDidSendActionNotification
                              object: nil];
@@ -121,14 +130,10 @@
 #pragma mark -
 
 - (void)showClientWindow: (id)sender {
-    [myServerWindowController hideServerWindow: sender];
-    
     [myClientWindowController showClientWindow: sender];
 }
 
 - (void)showServerWindow: (id)sender {
-    [myClientWindowController hideClientWindow: sender];
-    
     [myServerWindowController showServerWindow: sender];
 }
 
@@ -275,6 +280,19 @@
 
 - (void)menuDidSendAction: (NSNotification *)notification {
     [NSApp activateIgnoringOtherApps: YES];
+}
+
+#pragma mark -
+
+- (void)displayRefusedConnectionAlert {
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    
+    [alert addButtonWithTitle: ZeroKitLocalizedString(@"OK")];
+    
+    [alert setMessageText: ZeroKitLocalizedString(@"Synergy connection refused")];
+    [alert setInformativeText: ZeroKitLocalizedString(@"Emergence was unable to make a connection with the specified Synergy server.")];
+    
+    [alert runModal];
 }
 
 @end

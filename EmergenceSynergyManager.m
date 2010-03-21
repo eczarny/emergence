@@ -166,7 +166,7 @@ static EmergenceSynergyManager *sharedInstance = nil;
         return;
     }
     
-    arguments = [NSArray arrayWithObjects: synergyPath, @"-d", @"FATAL", @"-f", hostName, nil];
+    arguments = [NSArray arrayWithObjects: synergyPath, @"-d", EmergenceSynergyDebuggingLevel, @"-f", hostName, nil];
     
     mySynergyProcess = [[EmergenceSynergyProcess alloc] initWithArguments: arguments processType: SynergyProcessTypeClient];
     
@@ -191,7 +191,7 @@ static EmergenceSynergyManager *sharedInstance = nil;
         return;
     }
     
-    arguments = [NSArray arrayWithObjects: synergyPath, @"-d", @"FATAL", @"-f", @"-c", [EmergenceUtilities synergyConfigurationFilePath], nil];
+    arguments = [NSArray arrayWithObjects: synergyPath, @"-d", EmergenceSynergyDebuggingLevel, @"-f", @"-c", [EmergenceUtilities synergyConfigurationFilePath], nil];
     
     mySynergyProcess = [[EmergenceSynergyProcess alloc] initWithArguments: arguments processType: SynergyProcessTypeServer];
     
@@ -245,18 +245,18 @@ static EmergenceSynergyManager *sharedInstance = nil;
 - (void)synchronizeSynergyProcessWithFilesystem {
     EmergenceProcess *process = [EmergenceUtilities processFromFile: EmergenceSynergyProcessFile];
     
-    if (!mySynergyProcess && process) {
-        NSLog(@"The Synergy manager found a Synergy process saved to disk: %d", [process processIdentifier]);
-        
-        mySynergyProcess = [process retain];
-        
-        return;
-    } else {
+    if ([self isSynergyRunning]) {
         NSLog(@"The Synergy manager is saving the current Synergy process to disk.");
         
         if (![EmergenceUtilities saveProcess: mySynergyProcess toFile: EmergenceSynergyProcessFile]) {
             NSLog(@"Unable to save the Synergy process to disk.");
         }
+    } else if (process && [process isProcessRunning]) {
+        NSLog(@"The Synergy manager found a Synergy process saved to disk: %d", [process processIdentifier]);
+        
+        [mySynergyProcess autorelease];
+        
+        mySynergyProcess = [process retain];
     }
 }
 

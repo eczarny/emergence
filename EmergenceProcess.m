@@ -159,7 +159,7 @@
     NSData *data;
     
     if (!myTask) {
-        NSLog(@"No Synergy task was found, attempting to kill Synergy by process identifier.");
+        NSLog(@"Unable to terminate the task, attempting to kill the process instead.");
         
         [self killProcess];
         
