@@ -119,6 +119,16 @@
         
         [notificationCenter postNotificationName: EmergenceSynergyConnectionRefusedNotification object: self];
     }
+    
+    range = [output rangeOfString: EmergenceSynergyErrorString];
+    
+    if (range.location != NSNotFound) {
+        NSLog(@"Synergy encountered a fatal error.");
+        
+        [self stopProcess];
+        
+        [notificationCenter postNotificationName: EmergenceSynergyFatalErrorNotification object: self];
+    }
 }
 
 @end

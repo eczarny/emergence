@@ -57,6 +57,7 @@
 #define EmergenceSynergyProcessFailedNotification       @"EmergenceSynergyProcessFailedNotification"
 #define EmergenceSynergyProcessFinishedNotification     @"EmergenceSynergyProcessFinishedNotification"
 #define EmergenceSynergyConnectionRefusedNotification   @"EmergenceSynergyConnectionRefusedNotification"
+#define EmergenceSynergyFatalErrorNotification          @"EmergenceSynergyFatalErrorNotification"
 
 #pragma mark -
 
@@ -70,6 +71,7 @@
 #define EmergenceSynergyDebuggingLevel                  @"WARNING"
 
 #define EmergenceSynergyConnectionRefusedString         @"Connection refused"
+#define EmergenceSynergyErrorString                     @"ERROR"
 
 #pragma mark -
 

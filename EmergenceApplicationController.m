@@ -69,6 +69,8 @@
 
 #pragma mark -
 
+- (void)displayFatalErrorAlert;
+
 - (void)displayRefusedConnectionAlert;
 
 @end
@@ -106,6 +108,11 @@
     [notificationCenter addObserver: self
                            selector: @selector(refreshStatusMenu)
                                name: EmergenceSynergyProcessFinishedNotification
+                             object: nil];
+    
+    [notificationCenter addObserver: self
+                           selector: @selector(displayFatalErrorAlert)
+                               name: EmergenceSynergyFatalErrorNotification
                              object: nil];
     
     [notificationCenter addObserver: self
@@ -283,6 +290,19 @@
 }
 
 #pragma mark -
+
+- (void)displayFatalErrorAlert {
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    
+    [alert addButtonWithTitle: ZeroKitLocalizedString(@"OK")];
+    
+    [alert setMessageText: ZeroKitLocalizedString(@"Synergy encountered a fatal error")];
+    [alert setInformativeText: ZeroKitLocalizedString(@"Emergence was unable to execute the Synergy process, a fatal error has occurred.")];
+    
+    [alert setAlertStyle: NSCriticalAlertStyle];
+    
+    [alert runModal];
+}
 
 - (void)displayRefusedConnectionAlert {
     NSAlert *alert = [[[NSAlert alloc] init] autorelease];
