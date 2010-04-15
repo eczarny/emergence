@@ -20,6 +20,7 @@
 		071585DD1143403F003D3454 /* ZeroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071585DC1143403F003D3454 /* ZeroKit.framework */; };
 		071585F81143418E003D3454 /* ZeroKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 071585DC1143403F003D3454 /* ZeroKit.framework */; };
 		071C2420113CABC2006A905B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 071C241E113CABC2006A905B /* InfoPlist.strings */; };
+		0764FB541177C2C2003DA32C /* dsa_public.pem in Resources */ = {isa = PBXBuildFile; fileRef = 0764FB531177C2C2003DA32C /* dsa_public.pem */; };
 		0788308E0F5399680073DDC6 /* synergys in Copy Synergy Executables */ = {isa = PBXBuildFile; fileRef = 0788308C0F5399680073DDC6 /* synergys */; };
 		07ABBA480F6C245300824A84 /* EmergenceClientWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ABBA470F6C245300824A84 /* EmergenceClientWindowController.m */; };
 		07ABBA580F6C29A900824A84 /* EmergenceClientWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07ABBA560F6C29A900824A84 /* EmergenceClientWindow.xib */; };
@@ -81,6 +82,7 @@
 		0711AD390F65DBC7003AF147 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Languages/English.lproj/EmergenceUpdatePreferencePane.xib; sourceTree = "<group>"; };
 		071585DC1143403F003D3454 /* ZeroKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZeroKit.framework; path = Library/Frameworks/ZeroKit.framework; sourceTree = SDKROOT; };
 		071C241F113CABC2006A905B /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Languages/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0764FB531177C2C2003DA32C /* dsa_public.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_public.pem; path = Resources/Sparkle/dsa_public.pem; sourceTree = "<group>"; };
 		0788308B0F5399680073DDC6 /* synergyc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = synergyc; path = "Synergy/synergy-1.3.1/synergyc"; sourceTree = "<group>"; };
 		0788308C0F5399680073DDC6 /* synergys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = synergys; path = "Synergy/synergy-1.3.1/synergys"; sourceTree = "<group>"; };
 		07ABBA460F6C245300824A84 /* EmergenceClientWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceClientWindowController.h; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 				0788308C0F5399680073DDC6 /* synergys */,
 			);
 			name = "Synergy 1.3.1";
+			sourceTree = "<group>";
+		};
+		0764FB521177C29E003DA32C /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				0764FB531177C2C2003DA32C /* dsa_public.pem */,
+			);
+			name = Sparkle;
 			sourceTree = "<group>";
 		};
 		0788308A0F53994A0073DDC6 /* Synergy */ = {
@@ -359,6 +369,7 @@
 				07CACC7B0F53822C0038EF41 /* Interface Builder */,
 				07F5AB230F6322780023430C /* Localized Strings */,
 				07CACC7C0F5382330038EF41 /* Property Lists */,
+				0764FB521177C29E003DA32C /* Sparkle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -422,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0703BC5B0F575EE400E585BF /* Defaults.plist in Resources */,
+				0764FB541177C2C2003DA32C /* dsa_public.pem in Resources */,
 				07CACC860F5382900038EF41 /* Emergence.xib in Resources */,
 				07ABBA580F6C29A900824A84 /* EmergenceClientWindow.xib in Resources */,
 				0711AD3A0F65DBC7003AF147 /* EmergenceGeneralPreferencePane.xib in Resources */,
