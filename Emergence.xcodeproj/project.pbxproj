@@ -29,6 +29,7 @@
 		07CACC860F5382900038EF41 /* Emergence.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CACC840F5382900038EF41 /* Emergence.xib */; };
 		07CACCA80F538C910038EF41 /* EmergenceApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CACCA70F538C910038EF41 /* EmergenceApplicationController.m */; };
 		07CACCB40F5391780038EF41 /* EmergenceUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CACCB30F5391780038EF41 /* EmergenceUtilities.m */; };
+		07D060B911796E6300DB5167 /* GPL General Public License Version 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 07D060B811796E6300DB5167 /* GPL General Public License Version 2.pdf */; };
 		07D6C70B1139E80400F705D3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6C70A1139E80400F705D3 /* Sparkle.framework */; };
 		07D6C7381139FCCE00F705D3 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6C70A1139E80400F705D3 /* Sparkle.framework */; };
 		07E440010F5B84F600E0612F /* EmergenceSynergyProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */; };
@@ -106,6 +107,7 @@
 		07CACCB00F5390F60038EF41 /* EmergenceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceConstants.h; sourceTree = "<group>"; };
 		07CACCB20F5391780038EF41 /* EmergenceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceUtilities.h; sourceTree = "<group>"; };
 		07CACCB30F5391780038EF41 /* EmergenceUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceUtilities.m; sourceTree = "<group>"; };
+		07D060B811796E6300DB5167 /* GPL General Public License Version 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "GPL General Public License Version 2.pdf"; path = "Synergy/synergy-1.3.1/GPL General Public License Version 2.pdf"; sourceTree = "<group>"; };
 		07D6C70A1139E80400F705D3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = /Library/Frameworks/Sparkle.framework; sourceTree = "<absolute>"; };
 		07E43FFF0F5B84F600E0612F /* EmergenceSynergyProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergenceSynergyProcess.h; sourceTree = "<group>"; };
 		07E440000F5B84F600E0612F /* EmergenceSynergyProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergenceSynergyProcess.m; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		07343CDF0F53A9FF00BD42FC /* Synergy 1.3.1 */ = {
 			isa = PBXGroup;
 			children = (
+				07D060B811796E6300DB5167 /* GPL General Public License Version 2.pdf */,
 				2DFDF4D110640AB900A85D36 /* synergy.1.conf */,
 				2DFDF4D210640AB900A85D36 /* synergy.2.conf */,
 				0788308B0F5399680073DDC6 /* synergyc */,
@@ -440,6 +443,7 @@
 				07ABBB570F6C48EA00824A84 /* EmergenceServerWindow.xib in Resources */,
 				0711AD3C0F65DBC7003AF147 /* EmergenceUpdatePreferencePane.xib in Resources */,
 				0711ACD20F65D84E003AF147 /* General Preferences.tiff in Resources */,
+				07D060B911796E6300DB5167 /* GPL General Public License Version 2.pdf in Resources */,
 				071C2420113CABC2006A905B /* InfoPlist.strings in Resources */,
 				07F5AB300F6323330023430C /* Localizable.strings in Resources */,
 				0711ACD50F65D885003AF147 /* PreferencePanes.plist in Resources */,
