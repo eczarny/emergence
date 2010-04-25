@@ -556,10 +556,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07CACC820F5382790038EF41 /* EmergenceDevelopment.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				VERSION_INFO_FILE = "";
 			};
 			name = Development;
@@ -568,10 +565,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07CACC830F5382790038EF41 /* EmergenceRelease.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				VERSION_INFO_FILE = "";
 			};
 			name = Release;

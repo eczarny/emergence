@@ -9,7 +9,6 @@
 PRODUCT_NAME = Emergence
 INFOPLIST_FILE = Resources/Property Lists/Emergence-Info.plist
 
-GCC_PRECOMPILE_PREFIX_HEADER = YES
 GCC_PREFIX_HEADER = Emergence.pch
 
 INSTALL_PATH = /Applications
