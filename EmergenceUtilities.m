@@ -53,7 +53,7 @@
 #pragma mark -
 
 + (NSString *)synergyConfigurationFilePath {
-    NSString *applicationSupportPath = [EmergenceUtilities applicationSupportPath];
+    NSString *applicationSupportPath = [EmergenceUtilities applicationSupportPathForBundle: [EmergenceUtilities applicationBundle]];
     
     return [applicationSupportPath stringByAppendingPathComponent: EmergenceSynergyConfigurationFile];
 }
@@ -61,13 +61,13 @@
 #pragma mark -
 
 + (BOOL)saveProcess: (EmergenceProcess *)process toFile: (NSString *)file {
-    NSString *processPath = [[EmergenceUtilities applicationSupportPath] stringByAppendingPathComponent: file];
+    NSString *processPath = [[EmergenceUtilities applicationSupportPathForBundle: [EmergenceUtilities applicationBundle]] stringByAppendingPathComponent: file];
     
     return [NSKeyedArchiver archiveRootObject: process toFile: processPath];
 }
 
 + (EmergenceProcess *)processFromFile: (NSString *)file {
-    NSString *processPath = [[EmergenceUtilities applicationSupportPath] stringByAppendingPathComponent: file];
+    NSString *processPath = [[EmergenceUtilities applicationSupportPathForBundle: [EmergenceUtilities applicationBundle]] stringByAppendingPathComponent: file];
     
     return [NSKeyedUnarchiver unarchiveObjectWithFile: processPath];
 }

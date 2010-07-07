@@ -50,7 +50,7 @@
 #pragma mark -
 
 - (NSImage *)icon {
-    return [EmergenceUtilities imageFromBundledImageResource: @"Update Preferences"];
+    return [EmergenceUtilities imageFromResource: @"Update Preferences" inBundle: [EmergenceUtilities applicationBundle]];
 }
 
 #pragma mark -

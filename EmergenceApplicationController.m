@@ -92,7 +92,7 @@
 #pragma mark -
 
 - (void)applicationWillFinishLaunching: (NSNotification *)notification {
-    [EmergenceUtilities registerDefaults];
+    [EmergenceUtilities registerDefaultsForBundle: [EmergenceUtilities applicationBundle]];
     
     [mySynergyManager synchronizeSynergyProcessWithFilesystem];
 }

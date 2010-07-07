@@ -72,7 +72,7 @@
 
 #pragma mark -
 
-- (id)initWithCoder: (NSCoder*)coder {
+- (id)initWithCoder: (NSCoder *)coder {
     if (self = [super init]) {
         myProcessIdentifier = [coder decodeIntegerForKey: @"processIdentifier"];
         myDelegate = [coder decodeObjectForKey: @"delegate"];
@@ -83,7 +83,7 @@
 
 #pragma mark -
 
-- (void)encodeWithCoder: (NSCoder*)coder {
+- (void)encodeWithCoder: (NSCoder *)coder {
     [coder encodeInteger: myProcessIdentifier forKey: @"processIdentifier"];
     [coder encodeObject: myDelegate forKey: @"delegate"];
 }

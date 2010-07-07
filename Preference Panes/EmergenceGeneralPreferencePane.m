@@ -36,7 +36,7 @@
 - (void)preferencePaneDidLoad {
     NSInteger loginItemEnabledState = NSOffState;
     
-    if ([EmergenceUtilities isLoginItemEnabled]) {
+    if ([EmergenceUtilities isLoginItemEnabledForBundle: [EmergenceUtilities applicationBundle]]) {
         loginItemEnabledState = NSOnState;
     }
     
@@ -52,7 +52,7 @@
 #pragma mark -
 
 - (NSImage *)icon {
-    return [EmergenceUtilities imageFromBundledImageResource: @"General Preferences"];
+    return [EmergenceUtilities imageFromResource: @"General Preferences" inBundle: [EmergenceUtilities applicationBundle]];
 }
 
 #pragma mark -
@@ -71,9 +71,9 @@
 
 - (void)toggleLoginItem: (id)sender {
     if ([myLoginItemEnabled state] == NSOnState) {
-        [EmergenceUtilities enableLoginItem];
+        [EmergenceUtilities enableLoginItemForBundle: [EmergenceUtilities applicationBundle]];
     } else{
-        [EmergenceUtilities disableLoginItem];
+        [EmergenceUtilities disableLoginItemForBundle: [EmergenceUtilities applicationBundle]];
     }
 }
 

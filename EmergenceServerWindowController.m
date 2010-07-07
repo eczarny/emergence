@@ -108,7 +108,7 @@ static EmergenceServerWindowController *sharedInstance = nil;
         
         [alert addButtonWithTitle: ZeroKitLocalizedString(@"OK")];
         
-        [alert setMessageText: ZeroKitLocalizedString(@"Please provide more information.")];
+        [alert setMessageText: ZeroKitLocalizedString(@"Please provide more information")];
         [alert setInformativeText: ZeroKitLocalizedString(@"Emergence requires a valid hostname, or IP address, of at least one Synergy client.")];
         
         [alert runModal];
@@ -121,7 +121,7 @@ static EmergenceServerWindowController *sharedInstance = nil;
         
         [alert addButtonWithTitle: ZeroKitLocalizedString(@"OK")];
         
-        [alert setMessageText: ZeroKitLocalizedString(@"Unable to configure the Synergy server.")];
+        [alert setMessageText: ZeroKitLocalizedString(@"Unable to configure the Synergy server")];
         [alert setInformativeText: ZeroKitLocalizedString(@"There was a problem configuring the Synergy server, please try again.")];
         
         [alert runModal];
