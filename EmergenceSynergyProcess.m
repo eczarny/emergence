@@ -41,7 +41,7 @@
     return self;
 }
 
-- (id)initWithCoder: (NSCoder*)coder {
+- (id)initWithCoder: (NSCoder *)coder {
     if (self = [super initWithCoder: coder]) {
         myProcessType = [coder decodeIntegerForKey: @"processType"];
     }
@@ -51,7 +51,7 @@
 
 #pragma mark -
 
-- (void)encodeWithCoder: (NSCoder*)coder {
+- (void)encodeWithCoder: (NSCoder *)coder {
     [coder encodeInteger: myProcessType forKey: @"processType"];
     
     [super encodeWithCoder: coder];

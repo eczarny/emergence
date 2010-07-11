@@ -114,7 +114,7 @@ static EmergenceClientWindowController *sharedInstance = nil;
         
         [alert addButtonWithTitle: ZeroKitLocalizedString(@"OK")];
         
-        [alert setMessageText: ZeroKitLocalizedString(@"Please provide more information.")];
+        [alert setMessageText: ZeroKitLocalizedString(@"Please provide more information")];
         [alert setInformativeText: ZeroKitLocalizedString(@"Emergence requires a valid hostname, or IP address, of the Synergy server.")];
         
         [alert runModal];

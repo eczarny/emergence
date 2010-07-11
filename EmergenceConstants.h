@@ -42,8 +42,6 @@
 
 #pragma mark -
 
-#define EmergenceDefaultPreferencesFile                 @"Defaults"
-
 #define EmergenceSynergyProcessFile                     @"Synergy Process.plist"
 #define EmergenceSynergyConfigurationFile               @"synergy.conf"
 #define EmergenceSynergyConfigurationFileExtension      @"conf"
@@ -72,9 +70,3 @@
 
 #define EmergenceSynergyConnectionRefusedString         @"Connection refused"
 #define EmergenceSynergyErrorString                     @"ERROR"
-
-#pragma mark -
-
-#define EmergenceApplicationBundleName                  @"CFBundleName"
-#define EmergenceApplicationBundleVersion               @"CFBundleVersion"
-#define EmergenceApplicationBundleShortVersionString    @"CFBundleShortVersionString"
