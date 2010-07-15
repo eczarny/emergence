@@ -29,7 +29,7 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>http://appcasts.divisiblebyzero.com/emergence/updates.xml</string>
+	<string>http://appcasts.divisiblebyzero.com/emergence/appcast.xml</string>
 	<key>SUAllowsAutomaticUpdates</key>
 	<true/>
 	<key>SUScheduledCheckInterval</key>
