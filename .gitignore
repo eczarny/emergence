@@ -4,5 +4,7 @@
 *.mode1
 *.mode2
 *.pbxuser
+*.xcworkspace
 synergyc
 synergys
+xcuserdata/
